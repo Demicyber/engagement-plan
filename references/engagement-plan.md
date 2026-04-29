@@ -34,27 +34,27 @@
 
 > *💡 The core of this document. For each person relevant to this deal: who are they, what do we need from them, and which call(s) will we use to get it? People and calls are directly linked - every call exists to advance one or more people toward the outcome we need.*
 >
-> *Pull background from **Contact Profile Skill**. For executive-level (C-suite/VP), also apply **CXO Persona** insights. Do NOT include people who are not involved in this opportunity.*
+> *Pull stance and relationship history from **Contact Profile Skill**. For executive-level (C-suite/VP), pull priorities and pain points from **CXO Personas** (not Contact Profile). Do NOT include people who are not involved in this opportunity.*
 
 ### Key Stakeholders
 
-**{Name 1}** - {Title}
+**{Name 1}** — {Title}
 
 | Dimension | Details |
 |---|---|
 | **Role in This Deal** | `{Decision Maker / Champion / Influencer / Blocker / Evaluator / Procurement}` |
-| **Current Stance** | `{Supportive / Neutral / Cautious / Against / Unknown - and why}` |
-| **What They Care About** | `{Priorities, pain points - from Contact Profile; + CXO Persona if executive}` |
+| **Current Stance** | `{Supportive / Neutral / Cautious / Against / Unknown — and why}` *← from Contact Profile* |
+| **What They Care About** | `{Priorities, pain points}` *← from CXO Persona (exec) or Contact Profile (non-exec)* |
 | **What We Need From Them** | `{Specific outcome: approval, endorsement, introduction, sign-off, etc.}` |
-| **How to Win Them** | `{Our approach: what to show/say, who from AWS engages, which call(s) below}` |
+| **How to Win Them** | `{Our approach: what to show/say, who from AWS engages, recommended # of meetings with this person}` |
 
-**{Name 2}** - {Title}
+**{Name 2}** — {Title}
 
 | Dimension | Details |
 |---|---|
 | **Role in This Deal** | |
-| **Current Stance** | |
-| **What They Care About** | |
+| **Current Stance** | *← from Contact Profile* |
+| **What They Care About** | *← from CXO Persona or Contact Profile* |
 | **What We Need From Them** | |
 | **How to Win Them** | |
 

@@ -77,8 +77,8 @@ Read [references/engagement-plan.md](references/engagement-plan.md) before gener
 | Skill | Relationship |
 |--------|-------------|
 | **Opportunity Progression** | EP Section 1 pulls opp snapshot from here. Competitive, MEDDPICC, value prop, risk all live in Opp Progression. |
-| **Contact Profile** | EP Section 2 pulls trust level and background for each person from here. |
-| **CXO Personas** | For executive-level stakeholders, use persona insights to inform the engagement approach in Section 2. |
+| **Contact Profile** | EP Key Stakeholders pulls **Current Stance** and relationship history from here. |
+| **CXO Personas** | EP Key Stakeholders pulls **What They Care About** (priorities, pain points) from here for executive-level stakeholders. Do NOT use Contact Profile for exec priorities — use CXO Personas. |
 | **Call Plan** | EP Section 2 "Next" row in Engagement Roadmap triggers Call Plan generation. Call Plan pulls context from EP. |
 | **Post-Meeting Report** | PMR results auto-roll back into EP Section 3 (Execution Log) and update Section 2 (people stance + call status). |
 
