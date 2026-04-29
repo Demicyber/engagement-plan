@@ -82,17 +82,17 @@
 
 ### Next Milestone Detail
 
-> *💡 Full detail for the next engagement — this is what triggers Call Plan generation. After each PMR, the completed milestone moves to the Execution Log and the next Planned row gets expanded here.*
+> *💡 Full detail for the next engagement — triggers Call Plan generation. After each PMR, the completed milestone moves to the Execution Log and the next Planned row gets expanded here.*
 
-| Field | Details |
-|---|---|
-| **Milestone** | `{#1 — from Roadmap above}` |
-| **Target Date** | `{Week 1}` |
-| **Customer Attendees & Target Outcome** | `{CFO: confirm interest → Supportive}` | 
-| | `{IT Director: identify as Champion}` |
-| **AWS Team** | `{AE, SA}` |
-| **Objective (搞定什么事)** | `{Validate pain, understand decision process}` |
-| **Status** | **Next** → triggers Call Plan |
+**Milestone #1** — `{Target Date: Week 1}`
+
+**Objective (搞定什么事):** `{Validate pain, understand decision process}`
+
+**Customer Attendees & Target Outcome (搞定哪些人):**
+- `{CFO}` — confirm interest → Supportive
+- `{IT Director}` — identify as Champion
+
+**AWS Team:** `{AE, SA}`
 
 ---
 
