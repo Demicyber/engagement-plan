@@ -94,6 +94,11 @@
 
 **AWS Team:** `{AE, SA}`
 
+**Suggested Discovery Questions:**
+- `{e.g., What's the current process for X? What does success look like?}`
+- `{Tailored to the objective and each stakeholder's concerns}`
+- `{3-5 questions, prioritized by what's most critical to uncover}`
+
 ---
 
 ### Estimate & Uncertainty
