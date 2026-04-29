@@ -36,7 +36,7 @@
 >
 > *Pull background from **Contact Profile Skill**. For executive-level (C-suite/VP), also apply **CXO Persona** insights. Do NOT include people who are not involved in this opportunity.*
 
-### People & Objectives
+### Key Stakeholders
 
 **{Name 1}** - {Title}
 
