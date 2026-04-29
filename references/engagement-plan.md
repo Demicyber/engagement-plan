@@ -88,7 +88,7 @@
 
 **Objective:** `{Validate pain, understand decision process}`
 
-**Customer Attendees & Target Outcome (搞定哪些人):**
+**Customer Attendees & Target Outcome:**
 - `{CFO}` — confirm interest → Supportive
 - `{IT Director}` — identify as Champion
 
