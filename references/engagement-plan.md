@@ -30,7 +30,7 @@
 
 ---
 
-## 2. Engagement Plan(搞定人 + 搞定事)
+## 2. Engagement Plan
 
 > *💡 The core of this document. For each person relevant to this deal: who are they, what do we need from them, and which call(s) will we use to get it? People and calls are directly linked - every call exists to advance one or more people toward the outcome we need.*
 >
