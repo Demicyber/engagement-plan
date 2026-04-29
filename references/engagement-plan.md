@@ -88,10 +88,10 @@
 |---|---|
 | **Milestone** | `{#1 — from Roadmap above}` |
 | **Target Date** | `{Week 1}` |
-| **Customer Attendees** | `{CFO, IT Director}` |
+| **Customer Attendees & Target Outcome** | `{CFO: confirm interest → Supportive}` | 
+| | `{IT Director: identify as Champion}` |
 | **AWS Team** | `{AE, SA}` |
 | **Objective (搞定什么事)** | `{Validate pain, understand decision process}` |
-| **Target People Outcome (搞定哪些人)** | `{CFO: confirm interest → Supportive; IT Dir: identify as Champion}` |
 | **Status** | **Next** → triggers Call Plan |
 
 ---
