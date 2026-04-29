@@ -86,7 +86,7 @@
 
 **Milestone #1** — `{Target Date: Week 1}`
 
-**Objective (搞定什么事):** `{Validate pain, understand decision process}`
+**Focus:** `{Validate pain, understand decision process}`
 
 **Customer Attendees & Target Outcome (搞定哪些人):**
 - `{CFO}` — confirm interest → Supportive
