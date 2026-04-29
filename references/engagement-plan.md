@@ -64,19 +64,35 @@
 
 ### Engagement Roadmap
 
-> *Each row = one planned engagement milestone. Directly linked to the people above — every meeting targets specific people and objectives. Row marked “Next” triggers Call Plan generation. Target dates should work backward from the Deal Objective close date.*
+> *The full opportunity roadmap from now to close. Each row = one planned milestone. Target dates work backward from the Deal Objective close date. The row marked “Next” is expanded in detail below and triggers Call Plan generation. After each PMR, the current Next moves to Done and the following row becomes the new Next.*
 
-| # | Target Date | Customer Attendees | AWS Team | Objective (搞定什么事) | Target People Outcome (搞定哪些人) | Status |
-|---|---|---|---|---|---|---|
-| 1 | `{Week 1}` | `{CFO, IT Director}` | `{AE, SA}` | `{Validate pain, understand decision process}` | `{CFO: confirm interest → Supportive; IT Dir: identify as Champion}` | **Next** |
-| 2 | `{Week 3}` | `{CTO, Architect}` | `{SA, Specialist}` | `{Technical fit, POC scope}` | `{CTO: technical endorsement; Architect: agree on POC plan}` | Planned |
-| 3 | `{Week 5}` | `{CTO, CFO}` | `{AE, SA, Specialist}` | `{POC results, business case}` | `{CFO: approve business case; CTO: confirm technical fit}` | Planned |
-| 4 | `{Week 7}` | `{CFO, Procurement}` | `{AE, Deal Desk}` | `{Pricing, terms}` | `{CFO: budget sign-off; Procurement: accept terms}` | Planned |
-| 5 | `{Week 9}` | `{Legal, Procurement}` | `{AE, Legal}` | `{Contract execution}` | `{Legal: approve contract; Procurement: execute}` | Planned |
+| # | Target Window | Focus | Key People | Status |
+|---|---|---|---|---|
+| 1 | `{Week 1}` | `{Validate pain, understand decision process}` | `{CFO, IT Director}` | **Next** ↓ |
+| 2 | `{Week 3}` | `{Technical fit, POC scope}` | `{CTO, Architect}` | Planned |
+| 3 | `{Week 5}` | `{POC results, business case}` | `{CTO, CFO}` | Planned |
+| 4 | `{Week 7}` | `{Pricing, terms}` | `{CFO, Procurement}` | Planned |
+| 5 | `{Week 9}` | `{Contract execution}` | `{Legal, Procurement}` | Planned |
 
-> *Status: **Next** (triggers Call Plan) · **Planned** · **Done** · **Skipped***
+> *Status: **Next ↓** (detailed below) · **Planned** · **Done** · **Skipped***
 >
-> *Target dates work backward from the close date. If the deal objective is “close by end of Q3” and today is Week 1 of Q2, the plan should fit within that window. Adjust cadence based on deal urgency and customer availability.*
+> *Adjust cadence based on deal urgency and customer availability. Roadmap evolves after each PMR — milestones may be added, removed, or resequenced.*
+
+---
+
+### Next Milestone Detail
+
+> *💡 Full detail for the next engagement — this is what triggers Call Plan generation. After each PMR, the completed milestone moves to the Execution Log and the next Planned row gets expanded here.*
+
+| Field | Details |
+|---|---|
+| **Milestone** | `{#1 — from Roadmap above}` |
+| **Target Date** | `{Week 1}` |
+| **Customer Attendees** | `{CFO, IT Director}` |
+| **AWS Team** | `{AE, SA}` |
+| **Objective (搞定什么事)** | `{Validate pain, understand decision process}` |
+| **Target People Outcome (搞定哪些人)** | `{CFO: confirm interest → Supportive; IT Dir: identify as Champion}` |
+| **Status** | **Next** → triggers Call Plan |
 
 ---
 

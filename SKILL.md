@@ -67,7 +67,7 @@ Do not fabricate stakeholder information, relationship status, or trust levels. 
 Read [references/engagement-plan.md](references/engagement-plan.md) before generating. The template has 3 sections:
 
 1. **Opportunity Snapshot + Win Strategy** — Key opp info pulled from Opportunity Progression Skill, plus deal-level win theme
-2. **Engagement Plan (搞定人 + 搞定事)** — Per-person analysis (role, stance, what we need, how to win) directly linked to an Engagement Roadmap. Each milestone targets specific people and objectives, with both customer and AWS attendees. Includes best/worst case estimate that updates with each PMR. Row marked “Next” triggers Call Plan.
+2. **Engagement Plan (搞定人 + 搞定事)** — Per-person analysis (role, stance, what we need, how to win) followed by an Engagement Roadmap (full opportunity roadmap from now to close) and a Next Milestone Detail card (expanded view of the next engagement, triggers Call Plan). Includes best/worst case estimate that updates with each PMR.
 3. **Execution Log (回滚)** — Actual results from each visit, auto-updated after PMR. Plan adjustments tracked here.
 
 ---
@@ -90,9 +90,9 @@ Before delivering, validate:
 - Opportunity snapshot populated (or marked for Opp Progression input)
 - All relevant people listed with role, stance, and what we need from them
 - At least the top 2-3 people have a clear "How to Win" approach
-- Call-by-call plan with best/worst case estimate
-- Each call linked to specific people outcomes
-- One row marked "Next" (triggers Call Plan)
+- Engagement Roadmap with all milestones to close
+- Next Milestone Detail card fully populated (customer + AWS attendees, objective, target outcome)
+- Best/worst case estimate populated
 
 ---
 
