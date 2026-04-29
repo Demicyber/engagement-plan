@@ -74,13 +74,13 @@ Read [references/engagement-plan.md](references/engagement-plan.md) before gener
 
 ## 5. Relationship with Other Skills
 
-| Skill | Relationship |
-|--------|-------------|
-| **Opportunity Progression** | EP Section 1 pulls opp snapshot from here. Competitive, MEDDPICC, value prop, risk all live in Opp Progression. |
-| **Contact Profile** | EP Key Stakeholders pulls **Current Stance** and relationship history from here. |
-| **CXO Personas** | EP Key Stakeholders pulls **What They Care About** (priorities, pain points) from here for executive-level stakeholders. Do NOT use Contact Profile for exec priorities — use CXO Personas. |
-| **Call Plan** | EP Section 2 "Next" row in Engagement Roadmap triggers Call Plan generation. Call Plan pulls context from EP. |
-| **Post-Meeting Report** | PMR results auto-roll back into EP Section 3 (Execution Log) and update Section 2 (people stance + call status). |
+| Skill | Relationship | How to Access | If Unavailable |
+|--------|-------------|---------------|----------------|
+| **CXO Personas** | Key Stakeholders pulls **What They Care About** for executive-level stakeholders. Do NOT use Contact Profile for exec priorities. | Load the persona file matching the stakeholder's title from the `cxo-personas/personas/` repo. Use `INDEX.md` Title Mapping Guide to match job title → persona file. | Use general executive priorities based on role (e.g., CFO cares about cost, CTO cares about architecture). Mark as `[待确认 - no CXO Persona loaded]`. |
+| **Contact Profile** | Key Stakeholders pulls **Current Stance** and relationship history. | Load the contact's profile if one exists in the workspace. | Use whatever the sales rep provides verbally. Mark unknown fields as `[待确认]`. |
+| **Opportunity Progression** | EP Section 1 pulls opp snapshot. Competitive, MEDDPICC, value prop, risk all live here. | Load the opp record if one exists in the workspace. | Fill Section 1 from the sales rep's input. Mark missing fields as `[待确认]`. |
+| **Call Plan** | EP “Next” milestone triggers Call Plan generation. Call Plan pulls context from EP. | Agent generates Call Plan as a separate document when Next Milestone is confirmed. | N/A — Call Plan is always generated from EP. |
+| **Post-Meeting Report** | PMR results roll back into EP Section 3 (Execution Log) and update Section 2 (people stance + roadmap status). | Agent reads the PMR after each visit and updates the EP. | If no PMR is filed, agent prompts sales for a verbal debrief. |
 
 ---
 
@@ -98,11 +98,12 @@ Before delivering, validate:
 
 ## 7. Information Insufficient Fallback
 
-1. **Never block.** Generate best-effort version with available information.
+1. **Never block.** Generate best-effort version with available information. Every field in the template can be filled from sales rep input alone — other skills enrich but are not required.
 2. **Never hallucinate.** Do not fabricate stakeholder details, trust levels, or relationship history. Mark as `[待确认]`.
-3. **Proactively ask sales** - especially for: who's involved, their stance, internal politics, and deal timeline.
-4. **Max 3 questions at once.** Prioritize the most critical unknowns.
-5. **Guide with examples.** Show what a good answer looks like.
+3. **Fallback priority:** Sales rep input > Contact Profile > CXO Persona defaults > `[待确认]`.
+4. **Proactively ask sales** — especially for: who's involved, their stance, internal politics, and deal timeline.
+5. **Max 3 questions at once.** Prioritize the most critical unknowns.
+6. **Guide with examples.** Show what a good answer looks like.
 
 ---
 
@@ -120,7 +121,17 @@ Before delivering, validate:
 
 ## 9. Document Output
 
-All documents delivered as **Word (.docx) files** by default. Users can request other formats (Markdown, PDF). On first use, ask the user where they want documents saved.
+All documents delivered as **Markdown (.md)** by default. Users can request other formats (Word .docx, PDF). On first use, ask the user where they want documents saved.
+
+### File Naming Convention
+
+`EP_{Customer}_{Opportunity}.md`
+
+Example: `EP_MinghuaHeavy_AI-Quality-Inspection.md`
+
+### Storage
+
+Save EP files in the workspace or a location specified by the user. Each EP is a single file that gets updated in place (living document). The filename is the unique key — use it to find the EP when updating from PMR.
 
 ---
 
