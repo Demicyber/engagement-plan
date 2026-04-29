@@ -66,7 +66,7 @@
 
 > *The full opportunity roadmap from now to close. Each row = one planned milestone. Target dates work backward from the Deal Objective close date. The row marked “Next” is expanded in detail below and triggers Call Plan generation. After each PMR, the current Next moves to Done and the following row becomes the new Next.*
 
-| # | Target Window | Focus | Key People | Status |
+| # | Target Window | Objective | Key People | Status |
 |---|---|---|---|---|
 | 1 | `{Week 1}` | `{Validate pain, understand decision process}` | `{CFO, IT Director}` | **Next** ↓ |
 | 2 | `{Week 3}` | `{Technical fit, POC scope}` | `{CTO, Architect}` | Planned |
@@ -86,7 +86,7 @@
 
 **Milestone #1** — `{Target Date: Week 1}`
 
-**Focus:** `{Validate pain, understand decision process}`
+**Objective:** `{Validate pain, understand decision process}`
 
 **Customer Attendees & Target Outcome (搞定哪些人):**
 - `{CFO}` — confirm interest → Supportive
