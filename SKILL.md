@@ -121,9 +121,11 @@ Read [references/engagement-plan.md](references/engagement-plan.md) before gener
 
 Before delivering, validate:
 - Opportunity snapshot populated (or marked for Opp Progression input)
-- All relevant people listed with role, stance, and what we need from them
+- All relevant people listed with Engagement Priority, role, stance, and what we need from them
+- What They Care About populated for executive stakeholders (from CXO Persona, context-aware)
+- Profiling populated or marked `[待确认]` for all stakeholders
 - At least the top 2-3 people have a clear "How to Win" approach
-- Engagement Roadmap with all milestones to close
+- Engagement Roadmap with all milestones to close, sequenced per Rule 8
 - Next Milestone Detail card fully populated (customer + AWS attendees, objective, target outcome)
 - Best/worst case estimate populated
 
