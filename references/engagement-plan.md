@@ -34,7 +34,7 @@
 
 > *💡 The core of this document. For each person relevant to this deal: who are they, what do we need from them, and which call(s) will we use to get it? People and calls are directly linked - every call exists to advance one or more people toward the outcome we need.*
 >
-> *Pull stance and relationship history from **Contact Profile Skill**. For executive-level (C-suite/VP), pull priorities and pain points from **CXO Personas** (not Contact Profile). Do NOT include people who are not involved in this opportunity.*
+> *Pull stance and relationship history from **Contact Profiling Skill**. For executive-level (C-suite/VP), also pull role-level priorities and pain points from **CXO Personas**. Do NOT include people who are not involved in this opportunity.*
 
 ### Key Stakeholders
 
@@ -42,19 +42,23 @@
 
 | Dimension | Details |
 |---|---|
+| **Engagement Priority** | `{Must Meet / Important / Nice to Have}` |
 | **Role in This Deal** | `{Decision Maker / Champion / Influencer / Blocker / Evaluator / Procurement}` |
-| **Current Stance** | `{Supportive / Neutral / Cautious / Against / Unknown — and why}` *← from Contact Profile* |
-| **What They Care About** | `{Priorities, pain points}` *← from CXO Persona (exec) or Contact Profile (non-exec)* |
+| **Current Stance** | `{Supportive / Neutral / Cautious / Against / Unknown — and why}` *← from sales input, updated via PMR* |
+| **What They Care About** | `{Role-level priorities, pain points, KPIs, AI opportunities}` *← from CXO Persona (exec only). Summarize as 1 sentence or a few bullets.* |
+| **Profiling** | `{Communication style, decision patterns, risk tolerance, what motivates/triggers them}` *← from Contact Profiling (all stakeholders). Built through dialogue with sales, refined over time.* |
 | **What We Need From Them** | `{Specific outcome: approval, endorsement, introduction, sign-off, etc.}` |
-| **How to Win Them** | `{Our approach: what to show/say, who from AWS engages, recommended # of meetings with this person}` |
+| **How to Win Them** | `{Our approach: what to show/say, who from AWS engages, recommended # of meetings. Informed by Profiling insights for communication strategy.}` |
 
 **{Name 2}** — {Title}
 
 | Dimension | Details |
 |---|---|
+| **Engagement Priority** | `{Must Meet / Important / Nice to Have}` |
 | **Role in This Deal** | |
-| **Current Stance** | *← from Contact Profile* |
-| **What They Care About** | *← from CXO Persona or Contact Profile* |
+| **Current Stance** | *← from sales input, updated via PMR* |
+| **What They Care About** | *← from CXO Persona (exec only)* |
+| **Profiling** | *← from Contact Profiling* |
 | **What We Need From Them** | |
 | **How to Win Them** | |
 
@@ -135,4 +139,4 @@
 
 ---
 
-*Engagement Plan Template | Version: 1.0*
+*Engagement Plan Template | Version: 1.1*

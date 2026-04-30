@@ -52,7 +52,8 @@ The EP is organized around **people**, not process. Start with who's involved, t
 Always plan with best and worst case scenarios. Deals rarely go as planned - account for uncertainty, additional stakeholders surfacing, and meetings that don't achieve their objectives.
 
 ### Rule 4: Living Document
-The EP is continuously updated. Every Call Plan and PMR feeds back into it. The Execution Log (Section 4) grows with each interaction.
+### Rule 4: Living Document
+The EP is continuously updated. Every Call Plan, Executive Briefing, and PMR feeds back into it. When a CP or EB is generated with attendees or objectives that differ from EP's Next Milestone Detail, those changes are synced back to the EP immediately. The Execution Log (Section 4) grows with each interaction.
 
 ### Rule 5: Always Review with Sales
 After generating or updating, always ask sales to review and revise.
@@ -60,15 +61,31 @@ After generating or updating, always ask sales to review and revise.
 ### Rule 6: Never Hallucinate
 Do not fabricate stakeholder information, relationship status, or trust levels. If information is unknown, mark as `[待确认]` and ask sales to provide it.
 
+### Rule 8: Stakeholder Engagement Sequence
+When creating an EP, proactively ask sales:
+1. **"Are there must-meet stakeholders?"** — Distinguish `Must Meet` / `Important` / `Nice to Have`
+2. **"Do you have a preferred engagement sequence?"** — e.g., "I want to win CTO first, then approach CFO"
+
+Then combine sales preference with agent analysis to recommend an engagement sequence in the Roadmap:
+- **Sales preference** — always respected as primary input
+- **Decision role weight** — Economic Buyer > Champion > Influencer
+- **Current stance** — strategy choice: consolidate supporters first, or convert skeptics early?
+- **Stage exit criteria** — who's most critical for advancing to the next stage?
+- **Dependencies** — e.g., "Need CTO's technical sign-off before CFO will discuss budget"
+
+If the agent's recommended sequence differs from sales preference, **explain the reasoning and let sales decide**. Never override sales judgment silently.
+
+If sales has no preference, agent defaults to its own analysis-driven sequence and marks it as "建议顺序，请确认" / "Recommended sequence — please confirm".
+
 ---
 
 ## 4. EP Template
 
 Read [references/engagement-plan.md](references/engagement-plan.md) before generating. The template has 3 sections:
 
-1. **Opportunity Snapshot + Win Strategy** — Key opp info pulled from Opportunity Progression Skill, plus deal-level win theme
-2. **Engagement Plan (搞定人 + 搞定事)** — Per-person analysis (role, stance, what we need, how to win) followed by an Engagement Roadmap (full opportunity roadmap from now to close) and a Next Milestone Detail card (expanded view of the next engagement, triggers Call Plan). Includes best/worst case estimate that updates with each PMR.
-3. **Execution Log (回滚)** — Actual results from each visit, auto-updated after PMR. Plan adjustments tracked here.
+1. **Opportunity Snapshot + Win Strategy** - Key opp info pulled from Opportunity Progression Skill, plus deal-level win theme
+2. **Engagement Plan (搞定人 + 搞定事)** - Per-person analysis (role, stance, what we need, how to win) followed by an Engagement Roadmap (full opportunity roadmap from now to close) and a Next Milestone Detail card (expanded view of the next engagement, triggers Call Plan). Includes best/worst case estimate that updates with each PMR.
+3. **Execution Log (回滚)** - Actual results from each visit, auto-updated after PMR. Plan adjustments tracked here.
 
 ---
 
@@ -76,10 +93,11 @@ Read [references/engagement-plan.md](references/engagement-plan.md) before gener
 
 | Skill | Relationship | How to Access | If Unavailable |
 |--------|-------------|---------------|----------------|
-| **CXO Personas** | Key Stakeholders pulls **What They Care About** for executive-level stakeholders. Do NOT use Contact Profile for exec priorities. | Load the persona file matching the stakeholder's title from the `cxo-personas/personas/` repo. Use `INDEX.md` Title Mapping Guide to match job title → persona file. | Use general executive priorities based on role (e.g., CFO cares about cost, CTO cares about architecture). Mark as `[待确认 - no CXO Persona loaded]`. |
-| **Contact Profile** | Key Stakeholders pulls **Current Stance** and relationship history. | Load the contact's profile if one exists in the workspace. | Use whatever the sales rep provides verbally. Mark unknown fields as `[待确认]`. |
+| **CXO Personas** | Key Stakeholders pulls role-level insights (**What They Care About**) for executive-level stakeholders — priorities, pain points, KPIs, common objections. Provides the **what** layer of people strategy. | Load the persona file matching the stakeholder's title from the `cxo-personas/personas/` repo. Use `INDEX.md` Title Mapping Guide to match job title → persona file. | Use general executive priorities based on role (e.g., CFO cares about cost, CTO cares about architecture). Mark as `[待确认 - no CXO Persona loaded]`. |
+| **Contact Profiling** | Key Stakeholders pulls person-level behavioral profile (**Profiling**) for every stakeholder — communication style, decision patterns, what motivates/triggers them. Provides the **how** layer of people strategy. Updated through dialogue with sales and after each PMR. | Load the contact profiling file if one exists in the workspace; otherwise initiate profiling through dialogue with sales. | Use whatever the sales rep provides verbally. Mark unknown fields as `[待确认]`. |
 | **Opportunity Progression** | EP Section 1 pulls opp snapshot. Competitive, MEDDPICC, value prop, risk all live here. | Load the opp record if one exists in the workspace. | Fill Section 1 from the sales rep's input. Mark missing fields as `[待确认]`. |
-| **Call Plan** | EP “Next” milestone triggers Call Plan generation. Call Plan pulls context from EP. | Agent generates Call Plan as a separate document when Next Milestone is confirmed. | N/A — Call Plan is always generated from EP. |
+| **Call Plan** | EP "Next" milestone triggers Call Plan generation. Call Plan pulls context from EP. **Call Plan may sync changes back to EP** if attendees or objectives differ from Next Milestone Detail. | Agent generates Call Plan as a separate document when Next Milestone is confirmed. | N/A — Call Plan is always generated from EP. |
+| **Executive Briefing** | EP context feeds into EB generation. **EB may sync changes back to EP** if attendees or objectives differ from Next Milestone Detail. | Agent generates EB as a separate document when applicable. | N/A. |
 | **Post-Meeting Report** | PMR results roll back into EP Section 3 (Execution Log) and update Section 2 (people stance + roadmap status). | Agent reads the PMR after each visit and updates the EP. | If no PMR is filed, agent prompts sales for a verbal debrief. |
 
 ---
@@ -98,10 +116,10 @@ Before delivering, validate:
 
 ## 7. Information Insufficient Fallback
 
-1. **Never block.** Generate best-effort version with available information. Every field in the template can be filled from sales rep input alone — other skills enrich but are not required.
+1. **Never block.** Generate best-effort version with available information. Every field in the template can be filled from sales rep input alone - other skills enrich but are not required.
 2. **Never hallucinate.** Do not fabricate stakeholder details, trust levels, or relationship history. Mark as `[待确认]`.
 3. **Fallback priority:** Sales rep input > Contact Profile > CXO Persona defaults > `[待确认]`.
-4. **Proactively ask sales** — especially for: who's involved, their stance, internal politics, and deal timeline.
+4. **Proactively ask sales** - especially for: who's involved, their stance, internal politics, and deal timeline.
 5. **Max 3 questions at once.** Prioritize the most critical unknowns.
 6. **Guide with examples.** Show what a good answer looks like.
 
@@ -131,8 +149,8 @@ Example: `EP_MinghuaHeavy_AI-Quality-Inspection.md`
 
 ### Storage
 
-Save EP files in the workspace or a location specified by the user. Each EP is a single file that gets updated in place (living document). The filename is the unique key — use it to find the EP when updating from PMR.
+Save EP files in the workspace or a location specified by the user. Each EP is a single file that gets updated in place (living document). The filename is the unique key - use it to find the EP when updating from PMR.
 
 ---
 
-*Engagement Plan Skill | Version: 1.0*
+*Engagement Plan Skill | Version: 1.1*
