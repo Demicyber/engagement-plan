@@ -53,7 +53,16 @@ For **every stakeholder** in the EP, invoke **Contact Profiling** to obtain or b
 
 For **executive stakeholders** (C-suite / VP), additionally load the matched **CXO Persona** to understand **what** this role cares about — priorities, pain points, KPIs, common objections. This informs the "What They Care About" dimension.
 
-Both layers work together: CXO Persona provides role-level insight (the **what**); Contact Profiling provides person-level insight (the **how**).
+**Context-aware reading:** CXO Personas contain broad role-level knowledge. Do not dump the entire persona — **select and emphasize the dimensions most relevant to this specific opportunity**. For example, same CFO persona, different focus:
+- AI quality inspection opp → emphasize manufacturing ROI, cost-per-defect, CapEx vs OpEx
+- Data lake migration opp → emphasize TCO analysis, data governance cost, compliance
+- Security compliance opp → emphasize risk quantification, audit cost, regulatory penalty
+
+Depth also varies by stage: Prospect stage needs top-level priorities (1-2 sentences); Business Validation stage may need deep-dive into specific KPIs and objection patterns.
+
+**Web research enrichment:** CXO Personas are generic role templates. Always supplement with web research (company website, news, annual reports, LinkedIn) to capture industry-specific and company-specific context. If sales indicates a person doesn't fit the typical persona pattern, proactively research their background. Cross-validate persona assumptions against real-world data — e.g., if the persona says "CFO prioritizes cost optimization" but the company just raised a major funding round, cost sensitivity may be lower than expected.
+
+Both layers work together: CXO Persona provides role-level insight (the **what**); Contact Profiling provides person-level insight (the **how**). Web research grounds both in reality.
 
 ### Rule 4: Realistic Planning with Scenarios
 Always plan with best and worst case scenarios. Deals rarely go as planned - account for uncertainty, additional stakeholders surfacing, and meetings that don't achieve their objectives.
