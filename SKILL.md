@@ -5,7 +5,7 @@ description: >
   Focuses on people strategy and meeting execution: who to engage, what to discuss,
   how many meetings to plan, and tracking execution against the plan.
   Triggered when the agent learns about a new opportunity from a sales rep.
-  Works with Opportunity Progression, Contact Profile, Call Plan, Post-Meeting Report, and CXO Personas skills.
+  Works with Opportunity Progression, Contact Profiling, Call Plan, Post-Meeting Report, and CXO Personas skills.
   Triggers on: "engagement plan", "opportunity review", "deal strategy", "win plan",
   "how do I approach this deal", "help me plan this opportunity",
   "商机管理", "商机推进", "拜访规划".
@@ -48,17 +48,23 @@ When the agent learns about a new opportunity (from any request - call plan, mee
 ### Rule 2: People First
 The EP is organized around **people**, not process. Start with who's involved, then plan how to engage them. The meeting plan flows from the people strategy, not the other way around.
 
-### Rule 3: Realistic Planning with Scenarios
+### Rule 3: People-Informed (Contact Profiling + CXO Personas)
+For **every stakeholder** in the EP, invoke **Contact Profiling** to obtain or build their behavioral profile (communication style, decision patterns, risk tolerance, what motivates/triggers them). Use this to tailor engagement strategy for each person.
+
+For **executive stakeholders** (C-suite / VP), additionally load the matched **CXO Persona** to understand **what** this role cares about — priorities, pain points, KPIs, common objections. This informs the "What They Care About" dimension.
+
+Both layers work together: CXO Persona provides role-level insight (the **what**); Contact Profiling provides person-level insight (the **how**).
+
+### Rule 4: Realistic Planning with Scenarios
 Always plan with best and worst case scenarios. Deals rarely go as planned - account for uncertainty, additional stakeholders surfacing, and meetings that don't achieve their objectives.
 
-### Rule 4: Living Document
-### Rule 4: Living Document
-The EP is continuously updated. Every Call Plan, Executive Briefing, and PMR feeds back into it. When a CP or EB is generated with attendees or objectives that differ from EP's Next Milestone Detail, those changes are synced back to the EP immediately. The Execution Log (Section 4) grows with each interaction.
+### Rule 5: Living Document
+The EP is continuously updated. Every Call Plan, Executive Briefing, and PMR feeds back into it. When a CP or EB is generated with attendees or objectives that differ from EP's Next Milestone Detail, those changes are synced back to the EP immediately. The Execution Log (Section 3) grows with each interaction.
 
-### Rule 5: Always Review with Sales
+### Rule 6: Always Review with Sales
 After generating or updating, always ask sales to review and revise.
 
-### Rule 6: Never Hallucinate
+### Rule 7: Never Hallucinate
 Do not fabricate stakeholder information, relationship status, or trust levels. If information is unknown, mark as `[待确认]` and ask sales to provide it.
 
 ### Rule 8: Stakeholder Engagement Sequence
@@ -84,7 +90,7 @@ If sales has no preference, agent defaults to its own analysis-driven sequence a
 Read [references/engagement-plan.md](references/engagement-plan.md) before generating. The template has 3 sections:
 
 1. **Opportunity Snapshot + Win Strategy** - Key opp info pulled from Opportunity Progression Skill, plus deal-level win theme
-2. **Engagement Plan (搞定人 + 搞定事)** - Per-person analysis (role, stance, what we need, how to win) followed by an Engagement Roadmap (full opportunity roadmap from now to close) and a Next Milestone Detail card (expanded view of the next engagement, triggers Call Plan). Includes best/worst case estimate that updates with each PMR.
+2. **Engagement Plan (搞定人 + 搞定事)** - Per-person analysis (engagement priority, role, stance, what they care about, profiling, what we need, how to win) followed by an Engagement Roadmap (full opportunity roadmap from now to close) and a Next Milestone Detail card (expanded view of the next engagement, triggers Call Plan). Includes best/worst case estimate that updates with each PMR.
 3. **Execution Log (回滚)** - Actual results from each visit, auto-updated after PMR. Plan adjustments tracked here.
 
 ---
@@ -118,7 +124,7 @@ Before delivering, validate:
 
 1. **Never block.** Generate best-effort version with available information. Every field in the template can be filled from sales rep input alone - other skills enrich but are not required.
 2. **Never hallucinate.** Do not fabricate stakeholder details, trust levels, or relationship history. Mark as `[待确认]`.
-3. **Fallback priority:** Sales rep input > Contact Profile > CXO Persona defaults > `[待确认]`.
+3. **Fallback priority:** Sales rep input > Contact Profiling > CXO Persona defaults > `[待确认]`.
 4. **Proactively ask sales** - especially for: who's involved, their stance, internal politics, and deal timeline.
 5. **Max 3 questions at once.** Prioritize the most critical unknowns.
 6. **Guide with examples.** Show what a good answer looks like.
