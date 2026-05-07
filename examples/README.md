@@ -2,6 +2,8 @@
 
 以下 4 个场景用于演示 Engagement Plan skill 的完整闭环流程（EP → Call Plan / Executive Briefing → PMR）。
 
+> ⚠️ **Disclaimer:** 场景中的公司名称为真实企业，但**所有人物姓名、对话内容、态度描述、引用语句均为虚构**，仅用于演示 skill 的输出格式和质量标准。不代表任何真实商业关系或个人观点。
+
 ---
 
 ## 场景 1：Anker（制造/消费电子）— Internal Executive Briefing
