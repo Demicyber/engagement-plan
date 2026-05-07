@@ -32,17 +32,17 @@ HKEX's core pain is **latency unpredictability on Azure during peak trading hour
 
 ### Key Stakeholders
 
-**Dr. James Wong 黄志明** — CTO
+**John Hsu** — CTO
 
 | Dimension | Details |
 |---|---|
 | **Engagement Priority** | Must Meet |
-| **Role in This Deal** | Champion + Technical Decision Maker — reports directly to HKEX CEO, owns all technology strategy including trading platform architecture. Has budget authority up to HK$50M; above that requires Group CEO + Board Technology Committee approval. |
+| **Role in This Deal** | Champion + Technical Decision Maker — reports to HKEX Group CEO (via Management Committee), owns all technology strategy including trading platform architecture. Has budget authority up to HK$50M; above that requires Group CEO + Board Technology Committee approval. |
 | **Current Stance** | Supportive — initiated contact with AWS after the second latency incident in March 2026. Frustrated with Azure's response time ("three weeks to get a proper RCA from Microsoft"). Actively exploring alternatives for latency-critical path. However, politically careful — Azure relationship is managed at Group level and involves Microsoft's HK CEO personally. Won't make sudden moves. |
 | **What They Care About** | *← CXO Persona: CTO (Financial Services / Exchange context)* — System reliability and deterministic latency; regulatory compliance (SFC operational resilience, HKMA technology risk management); market reputation ("an exchange cannot have outages — our credibility IS the product"); vendor diversification (learned from over-reliance on single vendor); talent retention (wants engineers working on modern stack, not legacy). |
-| **Profiling** | *← Contact Profiling* — PhD in Computer Science (Cambridge), former Goldman Sachs infrastructure VP (8 years). Thinks in systems — loves architecture diagrams, hates hand-wavy "we'll figure it out" answers. Communication style: precise, measured, asks penetrating questions but gives you time to answer properly. Won't interrupt but will note inconsistencies and bring them up later. Prefers small meetings (3-4 people) over large presentations. Reads materials in advance — always comes prepared. Speaks English primarily in professional settings, Cantonese socially. Values long-term relationships over transactional vendor interactions. `[Updated: 2026-05-08 after first meeting]` |
+| **Profiling** | *← Contact Profiling* — Carnegie Mellon University. Prior roles: HSBC (CIO Asia Pacific, 2019-2023), Huawei Technologies (VP Global HR CIO, 2016-2019), SF Express (VP Group Technology, 2014), ALA Financial Corp (CEO/CTO, 2014-2016). Joined HKEX September 2023 as MD and Group CTO. Thinks in systems — loves architecture diagrams, hates hand-wavy "we'll figure it out" answers. Communication style: precise, measured, asks penetrating questions but gives you time to answer properly. Won't interrupt but will note inconsistencies and bring them up later. Prefers small meetings (3-4 people) over large presentations. Reads materials in advance — always comes prepared. Speaks English primarily in professional settings, Cantonese socially. Values long-term relationships over transactional vendor interactions. `[Updated: 2026-05-08 after first meeting]` |
 | **What We Need From Them** | EBC endorsement to proceed to POC + define POC success criteria jointly + internal sponsorship to ring-fence budget separate from Azure EA renewal |
-| **How to Win Them** | Peer-level technical credibility is non-negotiable — SA and FSI Specialist must demonstrate deep exchange domain knowledge (FIX, market data, matching engine architecture). Share NASDAQ and SGX references with specific latency metrics. Position AWS as the "exchange-grade cloud" — not a general-purpose platform. Avoid any perception of "selling" — he responds to consultative, problem-solving engagement. Suggest joint architecture review as next step (not a POC pitch). 王总 (GCR FSI Leader) for executive relationship building — James respects seniority and institutional commitment. Estimated 3-4 meetings to close. |
+| **How to Win Them** | Peer-level technical credibility is non-negotiable — SA and FSI Specialist must demonstrate deep exchange domain knowledge (FIX, market data, matching engine architecture). Share NASDAQ and SGX references with specific latency metrics. Position AWS as the "exchange-grade cloud" — not a general-purpose platform. Avoid any perception of "selling" — he responds to consultative, problem-solving engagement. Suggest joint architecture review as next step (not a POC pitch). 王总 (GCR FSI Leader) for executive relationship building — John respects seniority and institutional commitment. Estimated 3-4 meetings to close. |
 
 **Karen Chan 陈嘉欣** — Head of Cloud Strategy
 
@@ -68,7 +68,7 @@ HKEX's core pain is **latency unpredictability on Azure during peak trading hour
 | **What We Need From Them** | Architecture sign-off on proposed trading path migration + POC test plan approval + agreement that AWS HK multi-AZ meets DR requirements |
 | **How to Win Them** | This is a "show, don't tell" stakeholder. Written technical deep-dive document (not slides) addressing his three concerns point-by-point: (1) AWS HK Region data residency — provide contractual language and compliance attestation (HKMA TM-E-1 mapping), (2) lock-in avoidance — propose EKS/containers architecture with open standards (FIX engine in containers, portable across clouds), (3) latency evidence — share actual measured P99 data from SGX deployment on similar instance types. Arrange a dedicated 1:1 technical session with Andrew Zhang (FSI Specialist SA) — Robert will open up more in a small, purely technical setting. Do NOT bring commercial people to his sessions. Estimated 3-4 meetings to get sign-off (he's thorough). |
 
-*Engagement sequence rationale: CTO 黄志明 is the Champion who initiated — we have executive cover. Karen Chan controls budget and vendor process — she's the operational gatekeeper. Robert Yip is the architectural veto — if he's not satisfied, the deal stalls regardless of CTO and Karen's support. Strategy: maintain CTO momentum (EBC with 王总), simultaneously run a parallel technical track to win Robert through evidence and depth. Karen comes along once TCO story is solid and Robert's concerns are addressed.*
+*Engagement sequence rationale: CTO John Hsu is the Champion who initiated — we have executive cover. Karen Chan controls budget and vendor process — she's the operational gatekeeper. Robert Yip is the architectural veto — if he's not satisfied, the deal stalls regardless of CTO and Karen's support. Strategy: maintain CTO momentum (EBC with 王总), simultaneously run a parallel technical track to win Robert through evidence and depth. Karen comes along once TCO story is solid and Robert's concerns are addressed.*
 *Suggest validation, please confirm.*
 
 ---
@@ -77,12 +77,12 @@ HKEX's core pain is **latency unpredictability on Azure during peak trading hour
 
 | # | Target Window | Objective | Key Stakeholders | Status |
 |---|---|---|---|---|
-| 1 | Week 1 (May 8) | First meeting: validate latency pain, understand decision process, confirm CTO as champion | CTO 黄志明, Karen Chan | **Done** ✓ |
-| 2 | Week 2 (May 15) | Technical deep-dive: current OTP architecture, latency measurements, DR requirements | CTO 黄志明, Robert Yip, Karen Chan | **Done** ✓ |
-| 3 | Week 3 (May 28) | EBC: AWS GCR FSI Leader meets HKEX CTO team, strategic alignment, POC endorsement | CTO 黄志明, Karen Chan, Robert Yip | **Next** ↓ |
-| 4 | Week 5 (Jun 11) | Joint architecture review: proposed trading path on AWS HK + DR design | Robert Yip, CTO 黄志明 | Planned |
+| 1 | Week 1 (May 8) | First meeting: validate latency pain, understand decision process, confirm CTO as champion | CTO John Hsu, Karen Chan | **Done** ✓ |
+| 2 | Week 2 (May 15) | Technical deep-dive: current OTP architecture, latency measurements, DR requirements | CTO John Hsu, Robert Yip, Karen Chan | **Done** ✓ |
+| 3 | Week 3 (May 28) | EBC: AWS GCR FSI Leader meets HKEX CTO team, strategic alignment, POC endorsement | CTO John Hsu, Karen Chan, Robert Yip | **Next** ↓ |
+| 4 | Week 5 (Jun 11) | Joint architecture review: proposed trading path on AWS HK + DR design | Robert Yip, CTO John Hsu | Planned |
 | 5 | Week 7-10 (Jun 25 - Jul 16) | POC: latency benchmark on Graviton4 + market data pipeline + DR failover test | Robert Yip, Karen Chan (team) | Planned |
-| 6 | Week 12 (Jul 30) | POC results + commercial proposal + PPA negotiation | Karen Chan, CTO 黄志明 | Planned |
+| 6 | Week 12 (Jul 30) | POC results + commercial proposal + PPA negotiation | Karen Chan, CTO John Hsu | Planned |
 
 > *Status: **Next ↓** (detailed below) · **Planned** · **Done** ✓ · **Skipped***
 
@@ -95,7 +95,7 @@ HKEX's core pain is **latency unpredictability on Azure during peak trading hour
 **Objective:** Executive alignment via EBC — secure CTO's endorsement to proceed to POC, get Karen's commitment to ring-fence budget, begin addressing Robert's technical concerns with evidence
 
 **Customer Attendees & Target Outcome:**
-- **CTO 黄志明** — reaffirm champion role; hear AWS GCR FSI Leader's commitment to HKEX as strategic account; endorse POC timeline
+- **CTO John Hsu** — reaffirm champion role; hear AWS GCR FSI Leader's commitment to HKEX as strategic account; endorse POC timeline
 - **Karen Chan** — understand TCO positioning (multi-cloud optimization, not rip-and-replace); agree to allocate team resources for POC phase
 - **Robert Yip** — receive initial technical evidence (SGX latency data, HK Region architecture); identify specific concerns to address in dedicated follow-up session
 
@@ -136,7 +136,7 @@ HKEX's core pain is **latency unpredictability on Azure during peak trading hour
 - *→ Updated EP: Robert stance confirmed as Skeptical; Azure renewal deadline added to timeline*
 
 **[2026-05-08] First Meeting** — Stage: Prospect → Technical Validation
-- CTO 黄志明 confirmed latency incidents and SFC pressure. "We can't afford another order book delay — the market is watching."
+- CTO John Hsu confirmed latency incidents and SFC pressure. "We can't afford another order book delay — the market is watching."
 - Karen open but cautious: "Show me the TCO story and I'll listen. But my team can't support another cloud migration without clear ROI."
 - Robert not present (traveling). CTO said Robert will be at the technical session — "you'll need to convince him, he's the one who says yes or no on architecture."
 - *→ EP created. CTO confirmed as Champion. Karen identified as Economic Buyer (operational). Robert flagged as potential blocker.*
