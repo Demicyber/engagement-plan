@@ -1,6 +1,6 @@
 # Demo 场景完整版
 
-以下 4 个场景用于演示 EL Copilot 的完整闭环流程（EP → Call Plan / Executive Briefing → PMR）。
+以下 4 个场景用于演示 Engagement Plan skill 的完整闭环流程（EP → Call Plan / Executive Briefing → PMR）。
 
 ---
 
