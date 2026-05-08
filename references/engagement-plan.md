@@ -44,8 +44,8 @@
 
 | Dimension | Details |
 |---|---|
-| **Role in This Deal** | `{Decision Maker / Champion / Influencer / Blocker / Evaluator / Procurement}` ⚠️ *Must confirm with sales — do not guess* |
 | **Engagement Priority** | `{Must Win / Important / Monitor}` — *Agent suggests based on role and deal impact; sales confirms or adjusts* |
+| **Role in This Deal** | `{Decision Maker / Champion / Influencer / Blocker / Evaluator / Procurement}` ⚠️ *Must confirm with sales — do not guess* |
 | **Current Stance** | `{Supportive / Neutral / Cautious / Against / Unknown — and why}` |
 | **What They Care About** | `{Priorities, pain points — from Contact Profile; + CXO Persona if executive}` |
 | **What We Need From Them** | `{Specific outcome: approval, endorsement, introduction, sign-off, etc.}` |
@@ -55,8 +55,8 @@
 
 | Dimension | Details |
 |---|---|
-| **Role in This Deal** | ⚠️ *Must confirm with sales — do not guess* |
 | **Engagement Priority** | *Agent suggests; sales confirms* |
+| **Role in This Deal** | ⚠️ *Must confirm with sales — do not guess* |
 | **Current Stance** | |
 | **What They Care About** | |
 | **What We Need From Them** | |
