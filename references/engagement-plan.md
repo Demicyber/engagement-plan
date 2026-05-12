@@ -280,6 +280,16 @@ Roadmap 演进：
 数据来源：
 - Agent 基于 Roadmap + Key Stakeholders 的 stance/risk 分析，主动识别高风险节点
 - 跟销售确认：agent 建议 contingency，销售判断是否现实可行
+
+触发机制（两种）：
+1. 预设型：写在本表中的 trigger condition，agent 在每次 PMR 后对照检查是否已触发
+2. 实时型：对话中 agent 识别到以下信号时，主动建议启动或制定 contingency path：
+   - 销售表示某个 stakeholder 联系不上、不回应、不配合
+   - 销售询问"能不能找其他人""能不能换个方式"
+   - 某个 milestone 超过预期时间仍未推进
+   - 销售反馈某人态度从 Supporter 降级为 Neutral/Non-Supporter
+   - 出现原计划未预料的 blocker（新人介入、预算冻结、组织变动等）
+   Agent 应主动提出："看起来这条路径遇到阻碍了，要不要考虑替代方案？" 并给出具体建议。
 -->
 
 | 关键节点 | 触发条件 | Plan B |
