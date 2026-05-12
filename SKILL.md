@@ -45,10 +45,27 @@ Opp identified → EP created → Call Plan → Visit → PMR → Update EP → 
 ### Rule 1: Auto-Create on Any Opportunity
 When the agent learns about a new opportunity (from any request - call plan, meeting prep, deal discussion), automatically generate an EP. Never ask permission.
 
-### Rule 2: People First
+### Rule 2: Opportunity Snapshot — 数据来源
+
+**原则：**
+- 永远跟销售确认，不做假设
+- BTTROC 和 Opportunity Progression 可以叠加调用，不互斥
+- Agent 根据对话上下文灵活判断，不需要死板流程
+
+**信号参考：**
+- 销售提供了 scorecard / opp record / 完整的 deal 信息 → 优先调用 Opportunity Progression
+- 销售只给了客户名、模糊需求、或有 opp 但未填 scorecard → 调用 BTTROC 了解客户 potential opp，结合销售口述
+- 不确定时，一个问题确认："这个商机有没有现成的 scorecard 或 opp record？"
+
+**共通要求：**
+- 未确认字段标 `[待确认]`
+- 所有字段是 living 的，随 PMR 和 engage 演进持续更新
+- New Logo vs Existing Customer 影响后续 engagement 节奏：新客户需要更多 discovery + trust building，老客户可以利用已有关系加速
+
+### Rule 3: People First
 The EP is organized around **people**, not process. Start with who's involved, then plan how to engage them. The meeting plan flows from the people strategy, not the other way around.
 
-### Rule 3: People-Informed (Contact Profiling + CXO Personas)
+### Rule 4: People-Informed (Contact Profiling + CXO Personas)
 For **every stakeholder** in the EP, invoke **Contact Profiling** to obtain or build their behavioral profile (communication style, decision patterns, risk tolerance, what motivates/triggers them). Use this to tailor engagement strategy for each person.
 
 For **executive stakeholders** (C-suite / VP), additionally load the matched **CXO Persona** to understand **what** this role cares about — priorities, pain points, KPIs, common objections. This informs the "What They Care About" dimension.
@@ -64,19 +81,19 @@ Depth also varies by stage: Prospect stage needs top-level priorities (1-2 sente
 
 Both layers work together: CXO Persona provides role-level insight (the **what**); Contact Profiling provides person-level insight (the **how**). Web research grounds both in reality.
 
-### Rule 4: Realistic Planning with Scenarios
+### Rule 5: Realistic Planning with Scenarios
 Always plan with best and worst case scenarios. Deals rarely go as planned - account for uncertainty, additional stakeholders surfacing, and meetings that don't achieve their objectives.
 
-### Rule 5: Living Document
+### Rule 6: Living Document
 The EP is continuously updated. Every Call Plan, Executive Briefing, and PMR feeds back into it. When a CP or EB is generated with attendees or objectives that differ from EP's Next Milestone Detail, those changes are synced back to the EP immediately. The Execution Log (Section 3) grows with each interaction.
 
-### Rule 6: Always Review with Sales
+### Rule 7: Always Review with Sales
 After generating or updating, always ask sales to review and revise.
 
-### Rule 7: Never Hallucinate
+### Rule 8: Never Hallucinate
 Do not fabricate stakeholder information, relationship status, or trust levels. If information is unknown, mark as `[待确认]` and ask sales to provide it.
 
-### Rule 8: Stakeholder Engagement Sequence
+### Rule 9: Stakeholder Engagement Sequence
 When creating an EP, proactively ask sales:
 1. **"Are there must-meet stakeholders?"** — Distinguish `Must Meet` / `Important` / `Nice to Have`
 2. **"Do you have a preferred engagement sequence?"** — e.g., "I want to win CTO first, then approach CFO"

@@ -10,23 +10,62 @@
 
 ## 1. Opportunity Snapshot
 
-> *💡 Pulled from **Opportunity Progression Skill**.*
-
 | Field | Value |
 |---|---|
-| **Customer** | `{company name}` |
+| **Customer** | `{company name}` · `{industry}` · `{New Logo / Existing Customer}` |
 | **Opportunity Name** | `{opportunity name}` |
 | **Deal Value** | `{ARR or TCV}` |
 | **Current Stage** | `{Prospect / Qualified / Technical Validation / Business Validation / Committed / Closed}` |
-| **Target Close Date** | `{YYYY-MM-DD or target quarter}` |
-| **Why Now** | `{1-sentence trigger event}` |
-| **Deal Objective** | `{1-sentence: what does success look like? e.g., "Sign $2M PPA by end of Q3"}` |
+| **Target Close Date** | `{YYYY-MM-DD, quarter, or 相对时间}` |
+
+### Why Now
+
+<!-- AGENT GUIDANCE: 以下写法指引仅供agent参考，不出现在最终交付文档中
+公式：[具体触发事件] + [硬性deadline] + [不行动的业务后果]
+质量标准：
+- 触发事件有出处（财报、法规、合同到期、高管指令、竞争威胁）
+- Deadline 是硬的（客户不能随意推迟）
+- Urgency 来自客户自身，不是我们制造的
+避免：模糊表述如"想做转型"、"有预算"、"有兴趣"
+-->
+
+`{e.g., "现有ERP系统2027年6月停止维护，CIO已向董事会承诺18个月内完成迁移。按14个月实施周期倒推，必须在2026年Q1完成供应商选型。每延迟一个季度损失约$11M并购整合协同效应。"}`
+
+### Deal Objective
+
+<!-- AGENT GUIDANCE:
+公式：[动作] + [方案/范围] + [金额] + [时间] + [对齐的 Why Now]
+质量标准：
+- 像合同摘要一样具体：谁、买什么、多少钱、什么时候、为什么是这个时间
+- 与 Why Now 逻辑一致
+避免：模糊表述如"赢下这个客户的云业务"、"扩大份额"
+-->
+
+`{e.g., "Sign $3.2M TCV (3-year) AWS Enterprise Agreement，覆盖400+工作负载迁移，target close Q1 FY26 (March 31)，对齐数据中心租约到期 June 2026。"}`
 
 ### Win Strategy
 
-> *2-3 sentences: Why will the customer choose us? What's our core differentiation for this specific deal?*
+<!-- AGENT GUIDANCE:
+公式：[核心差异化] + [客户最关心的点] + [只有我们能deliver的] + [关键执行动作]
+质量标准：
+- 针对具体竞争对手的差异化，不是泛泛说"我们最好"
+- 锚定客户的 #1 优先级
+- 有可执行的关键动作
+- 随 engage 深入持续验证和更新
+-->
 
-`{e.g., "Customer's primary pain is margin erosion from manual finance processes. Our win theme is AI-powered finance automation with proven ROI from a peer manufacturer. Competitor (Alibaba Cloud) is weak on AI maturity - we lead with Bedrock + SageMaker depth."}`
+`{e.g., "客户平台团队有3年AWS经验，技术评估我们占优。Azure通过Microsoft EA有高管关系优势，我们通过联合executive briefing展示Graviton降低30% TCO来中和。关键动作：(1) 2月15日前完成MRA，(2) ProServ嵌入客户团队，(3) 安排同行业客户reference call。"}`
+
+**Key Risks:** `{最大的1-2个可能导致输单的风险因素}`
+
+<!-- AGENT GUIDANCE:
+Win Strategy 回答"凭什么赢"，Key Risks 回答"最怕什么"。两者构成完整战略判断。
+e.g., "CIO与微软关系深厚，可能绕过技术评估直接高层决策；客户内部重组可能导致项目暂停。"
+-->
+
+---
+
+*Last updated: {YYYY-MM-DD} · Source: {Opp Progression / BTTROC / 销售口述 / PMR #N}*
 
 ---
 
