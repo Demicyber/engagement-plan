@@ -297,7 +297,7 @@ Roadmap 演进：
 | `{e.g., Milestone #2: CTO 架构评审}` | `{e.g., "两周内通过正常渠道三次邀约 CTO 均未获回应，或 CTO 明确表示短期内没有时间安排专门会议。"}` | `{e.g., "通过 IT Director（已确认 Sponsor）先安排一次非正式的技术 deep-dive 工作坊，用初步架构成果和量化收益数据制造内部讨论，让 CTO 看到技术团队已在推进从而主动要求参与正式评审。同时请 AWS Executive Sponsor 发起 CxO peer-level 邀请函，提供 executive briefing 作为更高规格的参与入口。"}` |
 | `{e.g., Milestone #4: CFO 预算审批}` | `{e.g., "CFO 明确表示当前财年预算已冻结无法新增大额支出，或要求等到下一财年规划周期再讨论。"}` | `{e.g., "将 deal 结构从一次性 $3.2M 调整为 Phase 1 先行方案（$800K，聚焦最痛的2个工作负载迁移），用90天内的可验证 ROI 为下一财年全量预算建立 business case。同时探索 Partner（SI）先行承担部分实施投入以降低客户首期 commitment 的可能性。"}` |
 
-> *只聚焦 2-3 个最高风险的关键节点。不需要对每个 milestone 都写 contingency。随 deal 推进，新的风险节点可能出现，contingency paths 应同步更新。*
+> *只聚焦 2-3 个最高风险的关键节点。不需要对每个 milestone 都写 contingency。每次 PMR 后同步更新：已完成 milestone 的 contingency 移除，新暴露的高风险节点补充进来，原有 contingency 根据新信息调整。*
 
 ---
 
