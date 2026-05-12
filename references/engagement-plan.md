@@ -198,6 +198,29 @@ Exit Criteria 自检（不出现在最终文档，agent 内部把关）：
 - 好的 evidence：客户邮件确认、签字文档、会议纪要、POC scorecard
 - 差的 evidence："感觉客户挺积极的"、"他说会考虑"
 
+字段写法 guidance：
+
+**Target Window**
+- 写法灵活：可以是具体日期（"6月15日-20日"）、相对周数（"Week 3-4"）、或里程碑锚定（"POC 完成后1周内"）
+- 必须从 Deal Objective close date 倒推，确保整体时间线逻辑自洽
+- 如客户有已知的内部节点（董事会、财年结束、合同到期），优先对齐客户节奏
+- ❌ "尽快"、"TBD"
+- ✅ "Week 3-4（对齐客户6月30日架构委员会）"
+
+**Key Stakeholders**
+- 填这一步需要 engage 的客户侧核心人物（来自上方 Key Stakeholders section）
+- 一行一个 milestone，不按 stakeholder 拆行 — 每步涉及的人列在一起
+- 用名字（如果已知）或角色（如果还在 mapping），每步通常 1-3 人
+- Per-person 的细分目标不放在 roadmap，而是在 Next Milestone Detail / Call Plan 里展开
+- ❌ 列一长串人名凑数
+- ✅ "王总 (CTO), 李工 (Lead Architect)" 或 "{CTO, Lead Architect}"
+
+**AWS Team**
+- 填这一步参与的 AWS 侧角色或人名
+- 早期规划时填角色（AM, SA, Specialist），细化后可替换为具体人名
+- ❌ 把所有可能用到的人都列上
+- ✅ "AM + SA" 或 "张三 (AM), 李四 (Data SA)"
+
 Roadmap 演进：
 - 每次 PMR 后更新：当前 Next → Done，下一个 Planned → Next
 - 里程碑可以增加、删除、重排序 — 不是一成不变的
