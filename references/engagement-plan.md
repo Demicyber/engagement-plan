@@ -267,6 +267,47 @@ Roadmap 演进：
 - 降维：缩小 deal scope（enterprise → department, 全量 → POC-first, 大合同 → phase 分拆）
 - 借力：引入外部力量（partner/SI、executive sponsor 对等邀请、行业分析师背书、reference customer）
 
+路径策略库（灵活组合，不是固定选择）：
+搞不定某个 stakeholder 时，可用的路径方向包括但不限于：
+- 往下走：找他的下属先建立技术共识或产出成果，用结果倒逼他必须参与
+- 往上走：通过 executive sponsor 发起 peer-level 对接，提供更高规格的参与入口
+- 横向走：找他的同级（同 level 不同部门）形成组织内部联盟或共识压力
+- 往内找：找他团队里跟我们有过接触的人（之前合作过的工程师、参加过 workshop 的人）
+- 借外力：通过 Partner/SI 已有的客户关系、行业分析师推荐、reference customer 现身说法
+- 借内力：AWS 内部谁认识他？其他 AM 之前 cover 过这个客户？executive sponsor 有私人关系？
+- 换场景：不约正式会议，换成行业活动、executive dinner、客户 workshop、线上 webinar
+- 换诉求：不谈 deal，先帮他解决一个他自己的问题来建立 trust
+- 换时机：等一个他关心的 trigger event（财报、合同到期、竞品出问题、内部组织变动）
+- 换人设：不是销售去找他，让他信任的人（Champion、partner、内部同事）帮引荐
+以上路径可自由组合 — 比如"往下走 + 借外力"：通过 partner 关系接触他的下属，先做联合技术评估。
+
+Agent 生成 Plan B 的方式：
+1. 自主分析：基于 Key Stakeholders 的 stance/profiling/关系网络 + Roadmap 上下文，主动推断可能的替代路径
+2. 主动提问销售获取更多信息（销售脑子里有关系和信息但可能没主动说出来）：
+   - "这个人你认识他团队里其他人吗？跟谁关系比较好？"
+   - "有没有 partner 或者 SI 之前跟他合作过、说得上话？"
+   - "AWS 内部有没有同事之前跟他或他公司打过交道？"
+   - "你觉得他不回应的原因是什么？是忙、还是有顾虑、还是政治原因？"
+   - "他最近有什么关心的事情是我们能帮到的？"
+   - "如果不走他这条路，你觉得还有谁能影响这个决策？"
+3. 基于1+2的信息组合出具体可行的 Plan B 建议，跟销售确认可行性
+
+质量验证标准（Agent 写完 Plan B 后的自检 + 跟销售确认）：
+"Tuesday Morning Test"：如果 Plan A 周一下午失败了，周二早上能立刻启动 Plan B 吗？
+如果答案里有"尝试联系"、"看看能不能"、"希望"→ 不是 plan，是 hope。
+
+验证维度：
+| 标准 | 合格 | 不合格 |
+|------|------|--------|
+| 关系存在性 | 已有过接触，有上下文 | org chart 上的名字，从未联系 |
+| Stakeholder 动机 | 他有明确理由去行动（他的 pain/KPI） | 假设对方会出于好意帮忙 |
+| 时间可行性 | 在 deal 剩余 timeline 内可完成 | 需要的时间超出窗口 |
+| 独立于主路径 | 即使 Plan A 彻底失败也能走通 | 依赖同一个 blocker 配合 |
+| 具体性 | 有名字、有动作、有时间节点 | "找其他人试试"、"想办法" |
+| 不烧主路径 | 启动 Plan B 不损害 Plan A 关系 | 绕过人会激怒他造成更大阻碍 |
+
+如果某条 Plan B 无法通过验证 → 标注为"待验证"，agent 通过提问销售补充信息直到可验证。
+
 与 Estimate & Uncertainty 的关系：
 - "What could change" = 风险预测（可能发生什么）
 - Contingency Paths = 行动方案（如果真的发生了怎么办）
