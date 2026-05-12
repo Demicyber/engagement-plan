@@ -250,6 +250,45 @@ Roadmap 演进：
 >
 > *Roadmap 随 engage 深入持续演进 — 里程碑可增加、删除、重排序。每次 PMR 后更新。*
 
+**Contingency Paths:**
+
+<!-- AGENT GUIDANCE:
+定位：当 Roadmap 中某个关键节点被 block 时的替代行动路径。
+
+核心原则（综合 Miller Heiman Red Flags、Power Base Selling Flanking Strategy、MEDDPICC Gap Mitigation）：
+- 不是对整个 deal 的 Plan B，是针对 Roadmap 中 2-3 个最可能受阻的关键节点
+- 只写高风险节点 — 如果某步几乎不可能出问题，不需要 contingency
+- 每条必须有明确的 trigger condition（什么信号触发切换），不是"万一搞不定"
+
+替代路径类型：
+- 绕道人：通过目标 stakeholder 的下属/上级/同事/partner 关系间接施加影响
+  (出处：Power Base Selling "multiple paths to the Fox", Jim Holden, 2012)
+- 绕道事：调整 milestone 顺序、拆解大步骤为小步骤、用技术成果倒逼决策
+- 降维：缩小 deal scope（enterprise → department, 全量 → POC-first, 大合同 → phase 分拆）
+- 借力：引入外部力量（partner/SI、executive sponsor 对等邀请、行业分析师背书、reference customer）
+
+与 Estimate & Uncertainty 的关系：
+- "What could change" = 风险预测（可能发生什么）
+- Contingency Paths = 行动方案（如果真的发生了怎么办）
+- 两者形成闭环：risk → trigger → Plan B action
+
+质量标准：
+- Plan B 必须是具体可执行的动作序列，不是"想其他办法"
+- 必须说明通过谁/什么渠道/做什么事
+- 完整描述性语句
+
+数据来源：
+- Agent 基于 Roadmap + Key Stakeholders 的 stance/risk 分析，主动识别高风险节点
+- 跟销售确认：agent 建议 contingency，销售判断是否现实可行
+-->
+
+| 关键节点 | 触发条件 | Plan B |
+|----------|----------|--------|
+| `{e.g., Milestone #2: CTO 架构评审}` | `{e.g., "两周内通过正常渠道三次邀约 CTO 均未获回应，或 CTO 明确表示短期内没有时间安排专门会议。"}` | `{e.g., "通过 IT Director（已确认 Sponsor）先安排一次非正式的技术 deep-dive 工作坊，用初步架构成果和量化收益数据制造内部讨论，让 CTO 看到技术团队已在推进从而主动要求参与正式评审。同时请 AWS Executive Sponsor 发起 CxO peer-level 邀请函，提供 executive briefing 作为更高规格的参与入口。"}` |
+| `{e.g., Milestone #4: CFO 预算审批}` | `{e.g., "CFO 明确表示当前财年预算已冻结无法新增大额支出，或要求等到下一财年规划周期再讨论。"}` | `{e.g., "将 deal 结构从一次性 $3.2M 调整为 Phase 1 先行方案（$800K，聚焦最痛的2个工作负载迁移），用90天内的可验证 ROI 为下一财年全量预算建立 business case。同时探索 Partner（SI）先行承担部分实施投入以降低客户首期 commitment 的可能性。"}` |
+
+> *只聚焦 2-3 个最高风险的关键节点。不需要对每个 milestone 都写 contingency。随 deal 推进，新的风险节点可能出现，contingency paths 应同步更新。*
+
 ---
 
 ### Next Milestone Detail
@@ -358,6 +397,7 @@ Adversary → Non-Supporter → Neutral → Supporter → Sponsor
 "What could change" 写法标准：
 - 每条必须包含：[风险因素] + [对 timeline/milestone 的具体影响] + [触发条件]
 - 不超过 3-5 条，聚焦最可能发生且影响最大的
+- 高风险项应在 Engagement Roadmap 的 Contingency Paths 中有对应 Plan B
 - ❌ "CIO involvement not confirmed - may add 1-2 calls"（碎片）
 - ✅ 完整语句，见下方示例
 -->
