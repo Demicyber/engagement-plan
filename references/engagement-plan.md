@@ -245,22 +245,82 @@ Roadmap 演进：
 
 ### Next Milestone Detail
 
-> *💡 Full detail for the next engagement — triggers Call Plan generation. After each PMR, the completed milestone moves to the Execution Log and the next Planned row gets expanded here.*
+<!-- AGENT GUIDANCE:
+定位：Roadmap → Next Milestone Detail → Call Plan 的中间层。
+- Roadmap = 鸟瞰（一行一个 milestone）
+- Next Milestone Detail = 战术意图（对谁、达成什么、讨论什么）
+- Call Plan = 战术执行（具体会议的详细方案）
+本 section 的职责是"够用来触发 Call Plan 生成"，不重复 Call Plan 的细节（如会前准备、材料清单、成功标准等）。
 
-**Milestone #1** — `{Target Date: Week 1}`
+写作标准：
 
-**Objective:** `{Validate pain, understand decision process}`
+**Objective**
+公式：[战略目的] + [为什么这一步是当前最重要的] + [跟整体 roadmap 的关系]
+- ❌ "Validate pain, understand decision process"（碎片，太泛）
+- ✅ "通过首次技术交流深入了解客户当前架构痛点和内部采购决策流程，确认我们的方案假设是否成立，为后续架构评审奠定基础。"
+
+**Customer Attendees & Target Outcome（核心字段）**
+这是 per-person 的细分目标落地点。每个人必须有明确的、可验证的 target outcome。
+
+写法公式：[Name/Role] — [期望这个人从当前状态到什么状态] + [需要他做什么具体动作]
+
+质量验证（"5分钟测试"）：
+- 会议结束后5分钟内，你能不能判断这个 outcome 是否达成？如果不能 = 不够具体。
+
+按角色区分 outcome 类型：
+- Decision Maker / EB → 侧重 commitment、budget confirmation、timeline agreement
+- Champion → 侧重 action（帮你引荐、内部推动、分享信息）
+- Technical Evaluator → 侧重 validation（确认技术匹配、定义 POC 标准）
+- Blocker → 侧重 de-risking（让他说出具体顾虑、从反对变中立）
+
+stance advancement 参考：Unaware → Aware → Interested → Supportive → Committed → Champion
+
+- ❌ "CFO — confirm interest → Supportive"（碎片，无具体动作）
+- ❌ "IT Director — identify as Champion"（不可验证，怎么算 identify？）
+- ✅ "王总 (CFO) — 当前 Unaware，目标是让他认知到现有架构每季度多支出 $2M 的事实，并同意在下次领导会上听取我们的 business case 汇报。"
+- ✅ "李工 (IT Director) — 当前 Interested，目标是验证他是否愿意帮我们安排与 CTO 的技术深潜会议（Champion test：给他一个具体任务，看是否完成）。"
+- ✅ "张总 (CISO/Blocker) — 当前 Against（担心迁移安全风险），目标是让他明确说出具体的安全顾虑清单，并确认如果我们满足这些条件他不会阻拦。"
+
+**AWS Team**
+填这一步参与的 AWS 侧角色或人名（与 Roadmap 一致）。
+
+**Key Questions & Discussion Points**
+不只是 discovery 问题 — 根据 milestone 所处阶段选择合适的问题类型。
+
+按阶段区分：
+- Discovery: 开放性探索 — 了解痛点、现状、决策流程
+- Technical Validation: 标准确认 — 需求排序、集成约束、POC 标准
+- Business Case: 量化导向 — ROI 计算、优先级排序、审批条件
+- Negotiation: 条件探索 — 预算约束、合同条款、trade-off
+- Closing: 确认导向 — 剩余障碍、签约流程、时间承诺
+
+质量标准：
+- 每个问题必须 purpose-driven — 答案会直接改变你的策略或推进 deal
+- 问题要体现 stakeholder 的已知关注点（基于 What They Care About + Profiling）
+- 问题要展示专业度（不问网上能查到的信息）
+- 3-5 个问题，按优先级排序
+- ❌ "What are your biggest challenges?"（太泛，任何公司都能问）
+- ❌ "What's your budget?"（太直接，没有上下文）
+- ✅ "上次您提到数据驻留合规是核心顾虑 — 如果我们能在本地 region 提供完整的数据隔离方案，这是否能解决安全团队的主要担忧？还是还有其他阻碍因素？"
+- ✅ "贵司去年批准 SAP 迁移项目时，审批流程是怎样的？这次云基础设施的投资决策是否走类似通道？"
+-->
+
+> *💡 把当前 Roadmap 中标记为 "Next ↓" 的 milestone 展开为战术意图。触发 Call Plan 生成。每次 PMR 后，完成的 milestone 移入 Execution Log，下一个 Planned 行在此展开。*
+
+**Milestone #{n}** — `{Target Date}`
+
+**Objective:** `{e.g., "通过首次技术交流深入了解客户当前架构痛点和内部决策流程，确认迁移需求的紧迫性和决策链路，为后续正式架构评审和供应商入围奠定基础。"}`
 
 **Customer Attendees & Target Outcome:**
-- `{CFO}` — confirm interest → Supportive
-- `{IT Director}` — identify as Champion
+- `{e.g., "王总 (CTO) — 当前 Neutral（了解我们但未表态），目标是让他确认现有架构无法支撑明年业务增长目标，并同意安排一次专门的架构评审会议让我们展示迁移方案。"}`
+- `{e.g., "李工 (IT Director) — 当前 Interested（在技术社区了解过 AWS），目标是验证他是否愿意担任内部技术评估的牵头人，并请他提供当前系统架构文档供我们做迁移评估。"}`
 
-**AWS Team:** `{AE, SA}`
+**AWS Team:** `{e.g., "张三 (AM) 负责整体关系推进，李四 (SA) 负责技术交流和架构讨论。"}`
 
-**Suggested Discovery Questions:**
-- `{e.g., What's the current process for X? What does success look like?}`
-- `{Tailored to the objective and each stakeholder's concerns}`
-- `{3-5 questions, prioritized by what's most critical to uncover}`
+**Key Questions & Discussion Points:**
+- `{e.g., "贵司今年的核心业务增长目标对底层基础设施有什么新要求？现有架构在哪些场景下已经出现瓶颈或限制？"}`
+- `{e.g., "如果决定做架构升级，内部的评估和审批流程通常是怎样的？需要哪些角色参与决策？"}`
+- `{e.g., "上次您提到与某供应商的合同明年到期 — 续约评估是否已经启动？评估的核心标准是什么？"}`
 
 ---
 
