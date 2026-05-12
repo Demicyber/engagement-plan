@@ -337,35 +337,83 @@ Adversary → Non-Supporter → Neutral → Supporter → Sponsor
 
 ### Estimate & Uncertainty
 
-> *💡 Living estimate — updated after each PMR as new information reshapes the roadmap. Initial version is the agent's best estimate; subsequent versions reflect actual progress and re-forecasting.*
+<!-- AGENT GUIDANCE:
+这是对整个 deal 的预估 — 帮助销售设定预期和做 forecast。
+
+估算逻辑：
+- 从 Engagement Roadmap 的 milestone 数量和 Target Window 推导
+- 参考 deal 的复杂度因子调整：
+  - Deal size（<$100K 简单 / $100K-$500K 标准 / $500K-$1M 复杂 / $1M+ 战略级）
+  - New Logo vs Existing Customer（New Logo 通常 +50-100% 周期）
+  - 决策者数量（>5人的 committee buy 通常 +30-60%）
+  - 是否涉及 displacement（替换现有供应商通常 +20-50%）
+- Best Case = 一切顺利，客户推进积极，无意外
+- Worst Case = 合理的最差情况（不是灾难性的，是"正常的企业摩擦"）
+- 随 deal 推进，range 应该逐步收窄：
+  - 早期（Discovery）：±50-100% 的不确定性正常
+  - 中期（Evaluation）：±25-40%
+  - 后期（Negotiation）：±10-20%
+- 每次 PMR 后根据实际进展重新评估
+
+"What could change" 写法标准：
+- 每条必须包含：[风险因素] + [对 timeline/milestone 的具体影响] + [触发条件]
+- 不超过 3-5 条，聚焦最可能发生且影响最大的
+- ❌ "CIO involvement not confirmed - may add 1-2 calls"（碎片）
+- ✅ 完整语句，见下方示例
+-->
+
+> *💡 Living estimate — 每次 PMR 后根据新信息重新评估。初始版本是 agent 基于 deal 复杂度和 roadmap 的最佳估算；后续版本反映实际进展。*
 
 | | Best Case | Worst Case |
 |---|---|---|
-| **Calls to Close** | `{e.g., 5}` | `{e.g., 8}` |
+| **Milestones to Close** | `{e.g., 5}` | `{e.g., 8}` |
 | **Timeline** | `{e.g., 10 weeks}` | `{e.g., 16 weeks}` |
 
 **What could change:**
-- `{e.g., CIO involvement not confirmed - may add 1-2 calls}`
-- `{e.g., Procurement process unknown - could add 2-4 weeks}`
-- `{e.g., Competitor triggers bake-off - adds POC comparison}`
+- `{e.g., "CIO 目前尚未确认是否亲自参与评估流程，如果他要求单独汇报而非委托给 IT Director，可能需要额外增加1-2次高管会议，整体 timeline 延长2-3周。"}`
+- `{e.g., "客户采购部门的审批流程尚不清楚，基于同等规模企业的经验，合同谈判阶段可能比预期多出2-4周的法务审核周期。"}`
+- `{e.g., "如果竞争对手在技术评估阶段提出 bake-off 要求，将需要增加一轮对比 POC，预计影响4-6周。"}`
 
 ---
 
-## 3. Execution Log(回滚)
+## 3. Execution Log
 
-> *💡 Auto-updated after each Call Plan + PMR. Most recent at top. Tracks planned vs. actual and how the plan evolves.*
+<!-- AGENT GUIDANCE:
+数据来源：每次 Call Plan 执行后，由 PMR (Post-Meeting Report) skill 自动生成输入。
+Agent 从 PMR 中提取以下信息填入本 log：
+- Planned = 来自 Engagement Roadmap 中对应 milestone 的 Milestone 描述
+- Actual = 来自 PMR 中记录的实际发生情况
+- People Updates = 来自 PMR 中对每个 attendee 的 stance 变化观察（使用 Holden 5 级模型）
+- Key Learnings = 来自 PMR 中的核心发现和 insight
+- Plan Adjustment = Agent 基于 PMR 信息判断 Roadmap 是否需要调整
 
-### Call #{n} - {Date} - {Attendees}
+写作标准：
+- 所有字段必须是完整描述性语句
+- People Updates 必须使用 Holden stance 术语（Sponsor/Supporter/Neutral/Non-Supporter/Adversary）
+- Plan Adjustment 必须是 actionable 的（加什么 milestone？改什么时间线？调整什么策略？）
+- 如果实际情况与计划一致，也要写明"按计划推进，无需调整"，不要留空
+
+更新流程：
+1. Call Plan 执行 → PMR 生成
+2. Agent 从 PMR 提取关键信息 → 填入本 log 新条目
+3. 同步更新 Engagement Roadmap（当前 milestone Status → Done，下一个 → Next）
+4. 同步更新 Key Stakeholders 的 Current Stance（如有变化）
+5. 同步更新 Estimate & Uncertainty（如有变化）
+-->
+
+> *💡 每次 PMR 后自动添加新条目（最新在最上方）。记录计划 vs 实际的差异，以及由此引发的策略调整。*
+
+### Engagement #{n} - {Date} - {Attendees}
 
 | Field | Details |
 |---|---|
-| **Planned** | `{from Engagement Roadmap above}` |
-| **Actual** | `{from PMR}` |
-| **People Updates** | `{stance changes, new people identified}` |
-| **Key Learnings** | `{most important findings}` |
-| **Plan Adjustment** | `{Does the roadmap need to change? Add/remove calls?}` |
+| **Planned** | `{e.g., "CTO 和 IT Director 在首次技术交流中确认核心业务痛点和内部决策流程，授权进入正式技术评估阶段。"}` |
+| **Actual** | `{e.g., "CTO 确认了云成本优化是董事会级别的优先事项，但表示需要先完成内部安全评估才能授权技术评估。IT Director 主动提出担任评估协调人，并承诺两周内提供当前架构文档。"}` |
+| **People Updates** | `{e.g., "王总 (CTO): Neutral → Supporter（主动表达了对 AWS 成本优化能力的认可，但尚未公开承诺支持）。李工 (IT Director): Supporter → Sponsor（主动请缨担任内部评估协调人，承担了个人责任来推进项目）。"}` |
+| **Key Learnings** | `{e.g., "安全评估是必经流程，非可跳过步骤 — 需要在 Roadmap 中增加 CISO engagement milestone。客户内部有一个尚未浮出水面的 Azure 续约讨论正在进行，这解释了 CTO 为什么还没公开站队。"}` |
+| **Plan Adjustment** | `{e.g., "Roadmap 新增 Milestone #2: CISO 安全评估会议（Week 3），排在原计划架构评审之前。整体 timeline 预计延长2周。Estimate 调整：Best Case 从10周改为12周，Worst Case 从16周改为18周。"}` |
 
-> *New entries added automatically after each PMR. Engagement Roadmap updated simultaneously (status → Done, new rows added if needed).*
+> *每次 PMR 后自动添加新条目。Engagement Roadmap、Key Stakeholders stance、Estimate & Uncertainty 同步更新。*
 
 ---
 
