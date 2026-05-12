@@ -464,7 +464,7 @@ Agent 从 PMR 中提取以下信息填入本 log：
 2. Agent 从 PMR 提取关键信息 → 填入本 log 新条目
 3. 同步更新 Engagement Roadmap（当前 milestone Status → Done，下一个 → Next）
 4. 同步更新 Key Stakeholders 的 Current Stance（如有变化）
-5. 同步更新 Estimate & Uncertainty（如有变化）
+5. 同步更新 Estimate & Contingency（如有变化）
 -->
 
 > *💡 每次 PMR 后自动添加新条目（最新在最上方）。记录计划 vs 实际的差异，以及由此引发的策略调整。*
@@ -479,7 +479,7 @@ Agent 从 PMR 中提取以下信息填入本 log：
 | **Key Learnings** | `{e.g., "安全评估是必经流程，非可跳过步骤 — 需要在 Roadmap 中增加 CISO engagement milestone。客户内部有一个尚未浮出水面的 Azure 续约讨论正在进行，这解释了 CTO 为什么还没公开站队。"}` |
 | **Plan Adjustment** | `{e.g., "Roadmap 新增 Milestone #2: CISO 安全评估会议（Week 3），排在原计划架构评审之前。整体 timeline 预计延长2周。Estimate 调整：Best Case 从10周改为12周，Worst Case 从16周改为18周。"}` |
 
-> *每次 PMR 后自动添加新条目。Engagement Roadmap、Key Stakeholders stance、Estimate & Uncertainty 同步更新。*
+> *每次 PMR 后自动添加新条目。Engagement Roadmap、Key Stakeholders stance、Estimate & Contingency 同步更新。*
 
 ---
 
