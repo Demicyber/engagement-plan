@@ -250,15 +250,37 @@ Roadmap 演进：
 >
 > *Roadmap 随 engage 深入持续演进 — 里程碑可增加、删除、重排序。每次 PMR 后更新。*
 
-**Contingency Paths:**
+---
+
+### Estimate & Contingency
 
 <!-- AGENT GUIDANCE:
-定位：当 Roadmap 中某个关键节点被 block 时的替代行动路径。
+定位：整个 deal 的预估 + 关键风险节点的替代行动路径，合为一体。
+💡 Living estimate — 每次 PMR 后根据新信息重新评估。初始版本是 agent 基于 deal 复杂度和 roadmap 的最佳估算；后续版本反映实际进展。
+
+估算逻辑：
+- 从 Engagement Roadmap 的 milestone 数量和 Target Window 推导
+- 参考 deal 的复杂度因子调整：
+  - Deal size（<$100K 简单 / $100K-$500K 标准 / $500K-$1M 复杂 / $1M+ 战略级）
+  - New Logo vs Existing Customer（New Logo 通常 +50-100% 周期）
+  - 决策者数量（>5人的 committee buy 通常 +30-60%）
+  - 是否涉及 displacement（替换现有供应商通常 +20-50%）
+- Best Case = 一切顺利，客户推进积极，无意外
+- Worst Case = 合理的最差情况（不是灾难性的，是"正常的企业摩擦"）
+- 随 deal 推进，range 应该逐步收窄：
+  - 早期（Discovery）：±50-100% 的不确定性正常
+  - 中期（Evaluation）：±25-40%
+  - 后期（Negotiation）：±10-20%
+- 每次 PMR 后根据实际进展重新评估
+
+Key Risks & Contingency Paths 逻辑：
+- 每条风险形成完整闭环：[风险节点] → [对 timeline 的影响] → [触发条件] → [Plan B]
+- 只聚焦 2-3 个最高风险节点，不需要对每个 milestone 都写
+- 每条必须有明确的 trigger condition（什么信号触发切换），不是"万一搞不定"
 
 核心原则（综合 Miller Heiman Red Flags、Power Base Selling Flanking Strategy、MEDDPICC Gap Mitigation）：
-- 不是对整个 deal 的 Plan B，是针对 Roadmap 中 2-3 个最可能受阻的关键节点
+- 不是对整个 deal 的 Plan B，是针对 Roadmap 中最可能受阻的关键节点
 - 只写高风险节点 — 如果某步几乎不可能出问题，不需要 contingency
-- 每条必须有明确的 trigger condition（什么信号触发切换），不是"万一搞不定"
 
 替代路径类型：
 - 绕道人：通过目标 stakeholder 的下属/上级/同事/partner 关系间接施加影响
@@ -308,20 +330,6 @@ Agent 生成 Plan B 的方式：
 
 如果某条 Plan B 无法通过验证 → 标注为"待验证"，agent 通过提问销售补充信息直到可验证。
 
-与 Estimate & Uncertainty 的关系：
-- "What could change" = 风险预测（可能发生什么）
-- Contingency Paths = 行动方案（如果真的发生了怎么办）
-- 两者形成闭环：risk → trigger → Plan B action
-
-质量标准：
-- Plan B 必须是具体可执行的动作序列，不是"想其他办法"
-- 必须说明通过谁/什么渠道/做什么事
-- 完整描述性语句
-
-数据来源：
-- Agent 基于 Roadmap + Key Stakeholders 的 stance/risk 分析，主动识别高风险节点
-- 跟销售确认：agent 建议 contingency，销售判断是否现实可行
-
 触发机制（两种）：
 1. 预设型：写在本表中的 trigger condition，agent 在每次 PMR 后对照检查是否已触发
 2. 实时型：对话中 agent 识别到以下信号时，主动建议启动或制定 contingency path：
@@ -333,10 +341,19 @@ Agent 生成 Plan B 的方式：
    Agent 应主动提出："看起来这条路径遇到阻碍了，要不要考虑替代方案？" 并给出具体建议。
 -->
 
-| 关键节点 | 触发条件 | Plan B |
-|----------|----------|--------|
-| `{e.g., Milestone #2: CTO 架构评审}` | `{e.g., "两周内通过正常渠道三次邀约 CTO 均未获回应，或 CTO 明确表示短期内没有时间安排专门会议。"}` | `{e.g., "通过 IT Director（已确认 Sponsor）先安排一次非正式的技术 deep-dive 工作坊，用初步架构成果和量化收益数据制造内部讨论，让 CTO 看到技术团队已在推进从而主动要求参与正式评审。同时请 AWS Executive Sponsor 发起 CxO peer-level 邀请函，提供 executive briefing 作为更高规格的参与入口。"}` |
-| `{e.g., Milestone #4: CFO 预算审批}` | `{e.g., "CFO 明确表示当前财年预算已冻结无法新增大额支出，或要求等到下一财年规划周期再讨论。"}` | `{e.g., "将 deal 结构从一次性 $3.2M 调整为 Phase 1 先行方案（$800K，聚焦最痛的2个工作负载迁移），用90天内的可验证 ROI 为下一财年全量预算建立 business case。同时探索 Partner（SI）先行承担部分实施投入以降低客户首期 commitment 的可能性。"}` |
+> *💡 Living estimate — 每次 PMR 后根据新信息重新评估。初始版本是 agent 基于 deal 复杂度和 roadmap 的最佳估算；后续版本反映实际进展。*
+
+| | Best Case | Worst Case |
+|---|---|---|
+| **Milestones to Close** | `{e.g., 5}` | `{e.g., 8}` |
+| **Timeline** | `{e.g., 10 weeks}` | `{e.g., 16 weeks}` |
+
+**Key Risks & Contingency Paths:**
+
+| 风险节点 | 对 Timeline 的影响 | 触发条件 | Plan B |
+|----------|-------------------|----------|--------|
+| `{e.g., Milestone #2: CTO 架构评审}` | `{e.g., "+2-3 weeks, +1 milestone"}` | `{e.g., "两周内通过正常渠道三次邀约 CTO 均未获回应，或 CTO 明确表示短期内没有时间安排专门会议。"}` | `{e.g., "通过 IT Director（已确认 Sponsor）先安排一次非正式的技术 deep-dive 工作坊，用初步架构成果和量化收益数据制造内部讨论，让 CTO 看到技术团队已在推进从而主动要求参与正式评审。同时请 AWS Executive Sponsor 发起 CxO peer-level 邀请函，提供 executive briefing 作为更高规格的参与入口。"}` |
+| `{e.g., Milestone #4: CFO 预算审批}` | `{e.g., "+4-6 weeks, deal 结构可能变化"}` | `{e.g., "CFO 明确表示当前财年预算已冻结无法新增大额支出，或要求等到下一财年规划周期再讨论。"}` | `{e.g., "将 deal 结构从一次性 $3.2M 调整为 Phase 1 先行方案（$800K，聚焦最痛的2个工作负载迁移），用90天内的可验证 ROI 为下一财年全量预算建立 business case。同时探索 Partner（SI）先行承担部分实施投入以降低客户首期 commitment 的可能性。"}` |
 
 > *只聚焦 2-3 个最高风险的关键节点。不需要对每个 milestone 都写 contingency。每次 PMR 后同步更新：已完成 milestone 的 contingency 移除，新暴露的高风险节点补充进来，原有 contingency 根据新信息调整。*
 
@@ -422,48 +439,6 @@ Adversary → Non-Supporter → Neutral → Supporter → Sponsor
 - `{e.g., "贵司今年的核心业务增长目标对底层基础设施有什么新要求？现有架构在哪些场景下已经出现瓶颈或限制？"}`
 - `{e.g., "如果决定做架构升级，内部的评估和审批流程通常是怎样的？需要哪些角色参与决策？"}`
 - `{e.g., "上次您提到与某供应商的合同明年到期 — 续约评估是否已经启动？评估的核心标准是什么？"}`
-
----
-
-### Estimate & Uncertainty
-
-<!-- AGENT GUIDANCE:
-这是对整个 deal 的预估 — 帮助销售设定预期和做 forecast。
-
-估算逻辑：
-- 从 Engagement Roadmap 的 milestone 数量和 Target Window 推导
-- 参考 deal 的复杂度因子调整：
-  - Deal size（<$100K 简单 / $100K-$500K 标准 / $500K-$1M 复杂 / $1M+ 战略级）
-  - New Logo vs Existing Customer（New Logo 通常 +50-100% 周期）
-  - 决策者数量（>5人的 committee buy 通常 +30-60%）
-  - 是否涉及 displacement（替换现有供应商通常 +20-50%）
-- Best Case = 一切顺利，客户推进积极，无意外
-- Worst Case = 合理的最差情况（不是灾难性的，是"正常的企业摩擦"）
-- 随 deal 推进，range 应该逐步收窄：
-  - 早期（Discovery）：±50-100% 的不确定性正常
-  - 中期（Evaluation）：±25-40%
-  - 后期（Negotiation）：±10-20%
-- 每次 PMR 后根据实际进展重新评估
-
-"What could change" 写法标准：
-- 每条必须包含：[风险因素] + [对 timeline/milestone 的具体影响] + [触发条件]
-- 不超过 3-5 条，聚焦最可能发生且影响最大的
-- 高风险项应在 Engagement Roadmap 的 Contingency Paths 中有对应 Plan B
-- ❌ "CIO involvement not confirmed - may add 1-2 calls"（碎片）
-- ✅ 完整语句，见下方示例
--->
-
-> *💡 Living estimate — 每次 PMR 后根据新信息重新评估。初始版本是 agent 基于 deal 复杂度和 roadmap 的最佳估算；后续版本反映实际进展。*
-
-| | Best Case | Worst Case |
-|---|---|---|
-| **Milestones to Close** | `{e.g., 5}` | `{e.g., 8}` |
-| **Timeline** | `{e.g., 10 weeks}` | `{e.g., 16 weeks}` |
-
-**What could change:**
-- `{e.g., "CIO 目前尚未确认是否亲自参与评估流程，如果他要求单独汇报而非委托给 IT Director，可能需要额外增加1-2次高管会议，整体 timeline 延长2-3周。"}`
-- `{e.g., "客户采购部门的审批流程尚不清楚，基于同等规模企业的经验，合同谈判阶段可能比预期多出2-4周的法务审核周期。"}`
-- `{e.g., "如果竞争对手在技术评估阶段提出 bake-off 要求，将需要增加一轮对比 POC，预计影响4-6周。"}`
 
 ---
 
