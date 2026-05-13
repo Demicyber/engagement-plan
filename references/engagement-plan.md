@@ -434,6 +434,11 @@ PART B: Milestone Risk & Contingency（流程维度）
 - Call Plan = 战术执行（具体会议的详细方案）
 本 section 的职责是"够用来触发 Call Plan 生成"，不重复 Call Plan 的细节（如会前准备、材料清单、成功标准等）。
 
+⚡ 双向同步规则：
+- EP → Call Plan：本 section 内容自动流入 Call Plan 的 Meeting Details + Target Outcomes
+- Call Plan → EP：销售在 Call Plan 修改了 target outcome / attendees / next steps 后，Agent 必须检查本 section 是否需要同步更新
+- 绝对不能只改一个地方忘记另一个地方
+
 写作标准：
 
 **Objective**
