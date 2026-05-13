@@ -255,8 +255,10 @@ Roadmap 演进：
 ### Estimate & Contingency
 
 <!-- AGENT GUIDANCE:
-定位：整个 deal 的预估 + 关键风险节点的替代行动路径，合为一体。
+定位：整个 deal 的预估 + 双维度应急预案（人 + 流程），确保终点（win the deal）不变。
 💡 Living estimate — 每次 PMR 后根据新信息重新评估。初始版本是 agent 基于 deal 复杂度和 roadmap 的最佳估算；后续版本反映实际进展。
+
+核心约束：终点（Deal Objective）是固定的 — 所有 contingency 调整的是路径、节奏、接触方式，不是目标。
 
 估算逻辑：
 - 从 Engagement Roadmap 的 milestone 数量和 Target Window 推导
@@ -273,21 +275,53 @@ Roadmap 演进：
   - 后期（Negotiation）：±10-20%
 - 每次 PMR 后根据实际进展重新评估
 
-Key Risks & Contingency Paths 逻辑：
-- 每条风险形成完整闭环：[风险节点] → [对 timeline 的影响] → [触发条件] → [Plan B]
-- 只聚焦 2-3 个最高风险节点，不需要对每个 milestone 都写
-- 每条必须有明确的 trigger condition（什么信号触发切换），不是"万一搞不定"
+═══════════════════════════════════════════════════
+PART A: Stakeholder Risk & Leverage（人维度）
+═══════════════════════════════════════════════════
 
-核心原则（综合 Miller Heiman Red Flags、Power Base Selling Flanking Strategy、MEDDPICC Gap Mitigation）：
-- 不是对整个 deal 的 Plan B，是针对 Roadmap 中最可能受阻的关键节点
-- 只写高风险节点 — 如果某步几乎不可能出问题，不需要 contingency
+定位：识别最可能阻碍 deal 推进的关键人物 + 用"跨人杠杆"化解风险。
+方法论来源：Miller Heiman "Red Flags → Leverage from Strength" (The New Strategic Selling, 1998) + Power Base Selling "Paths to the Fox" (Jim Holden, 2012)
 
-替代路径类型：
-- 绕道人：通过目标 stakeholder 的下属/上级/同事/partner 关系间接施加影响
-  (出处：Power Base Selling "multiple paths to the Fox", Jim Holden, 2012)
-- 绕道事：调整 milestone 顺序、拆解大步骤为小步骤、用技术成果倒逼决策
-- 降维：缩小 deal scope（enterprise → department, 全量 → POC-first, 大合同 → phase 分拆）
-- 借力：引入外部力量（partner/SI、executive sponsor 对等邀请、行业分析师背书、reference customer）
+核心机制（Blue Sheet Section 3 逻辑）：
+- 每个 Red Flag 绑定一个具体的人 — 不是泛泛的"有风险"
+- 化解方式是找到另一个人身上的 Strength/关系来做杠杆
+- 公式：[某人的 Red Flag] → [另一个人的 Leverage] → [具体 Action]
+
+什么时候写 Stakeholder Risk：
+- Key Stakeholders 中 stance 为 Neutral / Non-Supporter / Adversary 的人 → 必须有
+- 任何 Engagement Priority 为 "Must Meet" 但尚未建立实质接触的人 → 必须有
+- 在 Roadmap 关键路径上但我方缺乏 access 的人 → 必须有
+- 已经是 Sponsor/Supporter 的人 → 通常不需要（除非有被调岗/离职等变化风险）
+
+Red Flag 标准类型（Miller Heiman 5种 + 扩展）：
+1. Contact Not Made — 联系不上 / 约不到
+2. New to Role — 新上任，态度未知
+3. Reorganization — 组织变动，权力/优先级可能移动
+4. Non-Supporter / Adversary — 主动或被动反对我们
+5. Information Uncertain — 对此人的判断依据不充分
+6. Access Dependent on Single Path — 只有一条路能触达他（如果这条断了就完全没办法）
+
+Leverage Source 类型（从哪里借力）：
+- Coach / Champion 的关系 — 让已有信任的人帮我们铺路
+- 下属/团队成员 — 先赢得执行层，用成果向上传导
+- 同级联盟 — 找他的 peer 形成共识压力
+- Executive Sponsor (peer-level) — AWS 高管对客户高管
+- Partner/SI 已有关系 — 借助第三方的信任
+- AWS 内部关系网 — 其他 AM/团队之前的客户接触
+- 技术成果/数据 — 用可验证的 outcome 倒逼他必须参与
+- 外部影响力 — 行业分析师、reference customer、行业活动
+
+Agent 生成 Stakeholder Risk 的方式：
+1. 自主分析：扫描 Key Stakeholders → 对 stance 为 Neutral/Non-Supporter/Adversary 或 "Must Meet 但未接触" 的人，自动生成 Red Flag
+2. 扫描关系网络：从已有 Sponsor/Supporter 身上找可用的 Leverage Source
+3. 主动提问销售获取更多信息（销售脑子里有关系但可能没说）：
+   - "这个人你认识他团队里其他人吗？跟谁关系比较好？"
+   - "有没有 partner 或者 SI 之前跟他合作过、说得上话？"
+   - "AWS 内部有没有同事之前跟他或他公司打过交道？"
+   - "你觉得他不回应的原因是什么？是忙、还是有顾虑、还是政治原因？"
+   - "他最近有什么关心的事情是我们能帮到的？"
+   - "如果不走他这条路，你觉得还有谁能影响这个决策？"
+4. 基于1+2+3组合出具体 Leverage Action，跟销售确认可行性
 
 路径策略库（灵活组合，不是固定选择）：
 搞不定某个 stakeholder 时，可用的路径方向包括但不限于：
@@ -303,19 +337,35 @@ Key Risks & Contingency Paths 逻辑：
 - 换人设：不是销售去找他，让他信任的人（Champion、partner、内部同事）帮引荐
 以上路径可自由组合 — 比如"往下走 + 借外力"：通过 partner 关系接触他的下属，先做联合技术评估。
 
-Agent 生成 Plan B 的方式：
-1. 自主分析：基于 Key Stakeholders 的 stance/profiling/关系网络 + Roadmap 上下文，主动推断可能的替代路径
-2. 主动提问销售获取更多信息（销售脑子里有关系和信息但可能没主动说出来）：
-   - "这个人你认识他团队里其他人吗？跟谁关系比较好？"
-   - "有没有 partner 或者 SI 之前跟他合作过、说得上话？"
-   - "AWS 内部有没有同事之前跟他或他公司打过交道？"
-   - "你觉得他不回应的原因是什么？是忙、还是有顾虑、还是政治原因？"
-   - "他最近有什么关心的事情是我们能帮到的？"
-   - "如果不走他这条路，你觉得还有谁能影响这个决策？"
-3. 基于1+2的信息组合出具体可行的 Plan B 建议，跟销售确认可行性
+═══════════════════════════════════════════════════
+PART B: Milestone Risk & Contingency（流程维度）
+═══════════════════════════════════════════════════
 
-质量验证标准（Agent 写完 Plan B 后的自检 + 跟销售确认）：
-"Tuesday Morning Test"：如果 Plan A 周一下午失败了，周二早上能立刻启动 Plan B 吗？
+定位：Roadmap 中最可能受阻的关键节点 + 替代推进路径。
+核心原则：
+- 不是对整个 deal 的 Plan B，是针对 Roadmap 中具体步骤的替代路径
+- 只写高风险节点（2-3个）— 如果某步几乎不可能出问题，不需要写
+- 每条必须有明确的 trigger condition（什么信号触发切换），不是"万一搞不定"
+- 每条风险形成完整闭环：[里程碑] → [风险项（🚩流程 / 🧑人物）] → [触发条件] → [影响] → [Plan B]
+
+重要：Milestone Risk 中的 🧑人物风险 与 Part A 的关系：
+- Part A = 战略层面 — "这个人整体上对我们是什么态度，我们的杠杆策略是什么"
+- Part B 的 🧑人物风险 = 战术层面 — "在这个具体步骤中，这个人可能怎样阻碍，替代路径是什么"
+- Part A 是"知彼"（了解人的风险全貌），Part B 是"行动"（在具体节点上怎么应对）
+- 两者互为引用：Part B 的 Plan B 经常调用 Part A 中已识别的 Leverage Source
+
+替代路径类型：
+- 绕道人：通过目标 stakeholder 的下属/上级/同事/partner 关系间接施加影响
+- 绕道事：调整 milestone 顺序、拆解大步骤为小步骤、用技术成果倒逼决策
+- 降维：缩小 deal scope（enterprise → department, 全量 → POC-first, 大合同 → phase 分拆）
+- 借力：引入外部力量（partner/SI、executive sponsor 对等邀请、行业分析师背书、reference customer）
+
+═══════════════════════════════════════════════════
+质量验证标准（适用于 Part A 和 Part B 所有 Plan B）
+═══════════════════════════════════════════════════
+
+"Tuesday Morning Test"（出处：战略销售实践社区通用验证标准）：
+如果 Plan A 周一下午失败了，周二早上能立刻启动 Plan B 吗？
 如果答案里有"尝试联系"、"看看能不能"、"希望"→ 不是 plan，是 hope。
 
 验证维度：
@@ -341,21 +391,37 @@ Agent 生成 Plan B 的方式：
    Agent 应主动提出："看起来这条路径遇到阻碍了，要不要考虑替代方案？" 并给出具体建议。
 -->
 
-> *💡 Living estimate — 每次 PMR 后根据新信息重新评估。初始版本是 agent 基于 deal 复杂度和 roadmap 的最佳估算；后续版本反映实际进展。*
+> *💡 Living estimate — 每次 PMR 后根据新信息重新评估。终点（Deal Objective）固定不变，调整的是路径和节奏。*
 
 | | Best Case | Worst Case |
 |---|---|---|
 | **Milestones to Close** | `{e.g., 5}` | `{e.g., 8}` |
 | **Timeline** | `{e.g., 10 weeks}` | `{e.g., 16 weeks}` |
 
-**Key Risks & Contingency Paths:**
+#### Stakeholder Risk & Leverage
 
-| 风险节点 | 对 Timeline 的影响 | 触发条件 | Plan B |
-|----------|-------------------|----------|--------|
-| `{e.g., Milestone #2: CTO 架构评审}` | `{e.g., "+2-3 weeks, +1 milestone"}` | `{e.g., "两周内通过正常渠道三次邀约 CTO 均未获回应，或 CTO 明确表示短期内没有时间安排专门会议。"}` | `{e.g., "通过 IT Director（已确认 Sponsor）先安排一次非正式的技术 deep-dive 工作坊，用初步架构成果和量化收益数据制造内部讨论，让 CTO 看到技术团队已在推进从而主动要求参与正式评审。同时请 AWS Executive Sponsor 发起 CxO peer-level 邀请函，提供 executive briefing 作为更高规格的参与入口。"}` |
-| `{e.g., Milestone #4: CFO 预算审批}` | `{e.g., "+4-6 weeks, deal 结构可能变化"}` | `{e.g., "CFO 明确表示当前财年预算已冻结无法新增大额支出，或要求等到下一财年规划周期再讨论。"}` | `{e.g., "将 deal 结构从一次性 $3.2M 调整为 Phase 1 先行方案（$800K，聚焦最痛的2个工作负载迁移），用90天内的可验证 ROI 为下一财年全量预算建立 business case。同时探索 Partner（SI）先行承担部分实施投入以降低客户首期 commitment 的可能性。"}` |
+> *对关键路径上搞不定/有风险的人：识别 Red Flag → 找杠杆 → 制定 Action。*
+> *方法论：Miller Heiman "Red Flags → Leverage from Strength" + Power Base Selling "Paths to the Fox"*
 
-> *只聚焦 2-3 个最高风险的关键节点。不需要对每个 milestone 都写 contingency。每次 PMR 后同步更新：已完成 milestone 的 contingency 移除，新暴露的高风险节点补充进来，原有 contingency 根据新信息调整。*
+| At-Risk Stakeholder | Red Flag | Leverage Source | Action |
+|---------------------|----------|-----------------|--------|
+| `{e.g., CTO 王总}` | `{e.g., Contact Not Made — 两周内三次邀约未获回应，可能因我方缺乏 peer-level credibility 或议题对他不够有吸引力}` | `{e.g., IT Director 赵工 (Sponsor) — 直接汇报线，CTO 高度信任其技术判断；AWS VP Engineering 可做 peer-level 对接}` | `{e.g., 1) 让赵工在周报中呈现 POC 初步成果，制造 CTO 主动了解的动机。2) AWS VP Engineering 发 peer-level 邮件，提供 executive briefing 作为更高规格入口。3) 如仍无回应，换场景 — 通过行业 CTO 圆桌活动制造非正式接触机会。}` |
+| `{e.g., CISO 张总}` | `{e.g., Non-Supporter — 前期沟通中明确表达对数据主权合规的担忧，且与现有安全供应商关系紧密}` | `{e.g., VP Engineering 李工 (Supporter) — 与 CISO 是前公司同事，私下关系好；第三方安全审计报告可提供客观背书}` | `{e.g., 1) 请李工非正式沟通了解 CISO 核心顾虑（是合规条款？还是政治？）。2) 提前准备 SOC2 + 等保三级报告 + 定制化数据驻留方案。3) 安排 AWS Security Specialist 做专项答疑，不经过正式评审流程先消除技术疑虑。}` |
+
+> *只针对 stance 为 Neutral / Non-Supporter / Adversary，或 "Must Meet 但尚未建立实质接触" 的关键人物。已经是 Sponsor/Supporter 的人通常不需要（除非有离职/调岗风险）。每次 PMR 后同步更新。*
+
+#### Milestone Risk & Contingency
+
+> *Roadmap 中最高风险的 2-3 个节点：流程风险（🚩）和人物风险（🧑）并列。*
+
+| 里程碑节点 | 风险项 | 触发条件 | 影响 | Plan B |
+|-----------|--------|---------|------|--------|
+| `{e.g., #2 CTO架构评审}` | 🧑 CTO 缺席/拒绝评审 | `{两周内三次正式邀约均未获回应}` | `{+2-3 weeks, 后续 milestone 全部顺延}` | `{通过 IT Director 先做非正式技术 deep-dive，用成果倒逼 CTO 参与。同时 AWS Exec Sponsor 发 CxO peer-level 邀请。（Leverage: 赵工的汇报线关系 + AWS VP credibility）}` |
+| | 🚩 评审排期冲突 | `{客户Q2架构委员会已排满，无法加入议程}` | `{+2 weeks}` | `{申请以"urgent security review"名义插入特别议程，或改为线下小范围 working session 替代正式委员会流程}` |
+| `{e.g., #4 CFO预算审批}` | 🧑 CFO 质疑ROI/冻结预算 | `{CFO 明确表示当前财年无法新增大额支出}` | `{+4-6 weeks, deal 结构可能变化}` | `{将 $3.2M 调整为 Phase 1（$800K，聚焦最痛2个工作负载），90天可验证 ROI 建立下一财年 business case。同时探索 Partner 先行承担部分实施投入。（Leverage: Champion 帮我们在内部推 business case + CFO peer reference call）}` |
+| | 🚩 采购流程延迟 | `{法务条款审核超出预期，数据主权条款争议}` | `{+3-4 weeks}` | `{预备本地化部署备选架构 + 提前准备合规文件包，并行推进供应商入库流程}` |
+
+> *终点（win the deal）不变 — 所有 Plan B 调整的是路径和节奏，不是目标。每次 PMR 后同步更新：已完成节点的 contingency 移除，新暴露的高风险节点补充进来。*
 
 ---
 
@@ -464,7 +530,7 @@ Agent 从 PMR 中提取以下信息填入本 log：
 2. Agent 从 PMR 提取关键信息 → 填入本 log 新条目
 3. 同步更新 Engagement Roadmap（当前 milestone Status → Done，下一个 → Next）
 4. 同步更新 Key Stakeholders 的 Current Stance（如有变化）
-5. 同步更新 Estimate & Contingency（如有变化）
+5. 同步更新 Estimate & Contingency（如有变化）— 包括 Stakeholder Risk & Leverage 和 Milestone Risk
 -->
 
 > *💡 每次 PMR 后自动添加新条目（最新在最上方）。记录计划 vs 实际的差异，以及由此引发的策略调整。*
