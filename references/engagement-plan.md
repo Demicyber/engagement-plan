@@ -255,7 +255,7 @@ Roadmap 演进：
 ### Estimate & Contingency
 
 <!-- AGENT GUIDANCE:
-定位：整个 deal 的预估 + 双维度应急预案（人 + 流程），确保终点（win the deal）不变。
+定位：整个 deal 的预估 + 双维度应急预案（人 + 流程），确保终点（Deal Objective）不变。
 💡 Living estimate — 每次 PMR 后根据新信息重新评估。初始版本是 agent 基于 deal 复杂度和 roadmap 的最佳估算；后续版本反映实际进展。
 
 核心约束：终点（Deal Objective）是固定的 — 所有 contingency 调整的是路径、节奏、接触方式，不是目标。
@@ -403,7 +403,7 @@ PART B: Milestone Risk & Contingency（流程维度）
 > *对关键路径上搞不定/有风险的人：识别 Red Flag → 找杠杆 → 制定 Action。*
 > *方法论：Miller Heiman "Red Flags → Leverage from Strength" + Power Base Selling "Paths to the Fox"*
 
-| At-Risk Stakeholder | Red Flag | Leverage Source | Action |
+| At-Risk Stakeholder | Red Flag | Leverage Source | Plan B |
 |---------------------|----------|-----------------|--------|
 | `{e.g., CTO 王总}` | `{e.g., Contact Not Made — 两周内三次邀约未获回应，可能因我方缺乏 peer-level credibility 或议题对他不够有吸引力}` | `{e.g., IT Director 赵工 (Sponsor) — 直接汇报线，CTO 高度信任其技术判断；AWS VP Engineering 可做 peer-level 对接}` | `{e.g., 1) 让赵工在周报中呈现 POC 初步成果，制造 CTO 主动了解的动机。2) AWS VP Engineering 发 peer-level 邮件，提供 executive briefing 作为更高规格入口。3) 如仍无回应，换场景 — 通过行业 CTO 圆桌活动制造非正式接触机会。}` |
 | `{e.g., CISO 张总}` | `{e.g., Non-Supporter — 前期沟通中明确表达对数据主权合规的担忧，且与现有安全供应商关系紧密}` | `{e.g., VP Engineering 李工 (Supporter) — 与 CISO 是前公司同事，私下关系好；第三方安全审计报告可提供客观背书}` | `{e.g., 1) 请李工非正式沟通了解 CISO 核心顾虑（是合规条款？还是政治？）。2) 提前准备 SOC2 + 等保三级报告 + 定制化数据驻留方案。3) 安排 AWS Security Specialist 做专项答疑，不经过正式评审流程先消除技术疑虑。}` |
@@ -421,7 +421,7 @@ PART B: Milestone Risk & Contingency（流程维度）
 | `{e.g., #4 CFO预算审批}` | 🧑 CFO 质疑ROI/冻结预算 | `{CFO 明确表示当前财年无法新增大额支出}` | `{+4-6 weeks, deal 结构可能变化}` | `{将 $3.2M 调整为 Phase 1（$800K，聚焦最痛2个工作负载），90天可验证 ROI 建立下一财年 business case。同时探索 Partner 先行承担部分实施投入。（Leverage: Champion 帮我们在内部推 business case + CFO peer reference call）}` |
 | | 🚩 采购流程延迟 | `{法务条款审核超出预期，数据主权条款争议}` | `{+3-4 weeks}` | `{预备本地化部署备选架构 + 提前准备合规文件包，并行推进供应商入库流程}` |
 
-> *终点（win the deal）不变 — 所有 Plan B 调整的是路径和节奏，不是目标。每次 PMR 后同步更新：已完成节点的 contingency 移除，新暴露的高风险节点补充进来。*
+> *终点（Deal Objective）不变 — 所有 Plan B 调整的是路径和节奏，不是目标。每次 PMR 后同步更新：已完成节点的 contingency 移除，新暴露的高风险节点补充进来。*
 
 ---
 
