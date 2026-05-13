@@ -173,13 +173,32 @@ Before delivering, validate:
 
 ## 9. Document Output
 
-All documents delivered as **Markdown (.md)** by default. Users can request other formats (Word .docx, PDF). On first use, ask the user where they want documents saved.
+### Default: HTML (Material Design 3)
+
+Every EP is rendered as a styled HTML file using the Jinja2 template at `templates/engagement-plan.html.j2`. The agent:
+1. Generates structured data (JSON) from the EP content
+2. Fills the template via `templates/render_ep.py`
+3. Outputs the rendered HTML file
+
+Visual style: Google Material Design 3 (Google Sans font, MD3 color tokens, 28px rounded cards, Material Symbols icons, responsive grid). See `references/engagement-plan-google.html` for the design reference.
+
+### On-Demand: PDF / Word
+
+- **PDF** — Generated from HTML via headless Chrome or weasyprint (preserves full styling)
+- **Word (.docx)** — Generated via python-docx (clean business format, not pixel-identical to HTML)
+
+Sales requests these explicitly; agent does not auto-generate.
 
 ### File Naming Convention
 
-`EP_{Customer}_{Opportunity}.md`
+| Format | Naming |
+|--------|--------|
+| Markdown | `EP_{Customer}_{Opportunity}.md` |
+| HTML | `EP_{Customer}_{Opportunity}.html` |
+| PDF | `EP_{Customer}_{Opportunity}.pdf` |
+| Word | `EP_{Customer}_{Opportunity}.docx` |
 
-Example: `EP_MinghuaHeavy_AI-Quality-Inspection.md`
+Example: `EP_MinghuaHeavy_AI-Quality-Inspection.html`
 
 ### Storage
 
