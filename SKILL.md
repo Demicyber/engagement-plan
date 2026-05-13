@@ -116,7 +116,7 @@ If sales has no preference, agent defaults to its own analysis-driven sequence a
 Read [references/engagement-plan.md](references/engagement-plan.md) before generating. The template has 3 sections:
 
 1. **Opportunity Snapshot + Win Strategy** - Key opp info pulled from Opportunity Progression Skill, plus deal-level win theme
-2. **Engagement Plan (搞定人 + 搞定事)** - Per-person analysis (engagement priority, role, stance, what they care about, profiling, what we need, how to win) followed by an Engagement Roadmap (full opportunity roadmap from now to close) and a Next Milestone Detail card (expanded view of the next engagement, triggers Call Plan). Includes best/worst case estimate that updates with each PMR.
+2. **Engagement Plan (搞定人 + 搞定事)** - Per-person analysis (engagement priority, role, stance, what they care about, profiling, what we need, how to win) followed by an Engagement Roadmap (full opportunity roadmap from now to close) and a Next Milestone Detail card (expanded view of the next engagement, triggers Call Plan). Includes Estimate & Contingency (with Plan B scenarios) that updates with each PMR.
 3. **Execution Log (回滚)** - Actual results from each visit, auto-updated after PMR. Plan adjustments tracked here.
 
 ---
@@ -127,7 +127,7 @@ Read [references/engagement-plan.md](references/engagement-plan.md) before gener
 |--------|-------------|---------------|----------------|
 | **CXO Personas** | Key Stakeholders pulls role-level insights (**What They Care About**) for executive-level stakeholders — priorities, pain points, KPIs, common objections. Provides the **what** layer of people strategy. | Load the persona file matching the stakeholder's title from the `cxo-personas/personas/` repo. Use `INDEX.md` Title Mapping Guide to match job title → persona file. | Use general executive priorities based on role (e.g., CFO cares about cost, CTO cares about architecture). Mark as `[待确认 - no CXO Persona loaded]`. |
 | **Contact Profiling** | Key Stakeholders pulls person-level behavioral profile (**Profiling**) for every stakeholder — communication style, decision patterns, what motivates/triggers them. Provides the **how** layer of people strategy. Updated through dialogue with sales and after each PMR. | Load the contact profiling file if one exists in the workspace; otherwise initiate profiling through dialogue with sales. | Use whatever the sales rep provides verbally. Mark unknown fields as `[待确认]`. |
-| **Opportunity Progression** | EP Section 1 pulls opp snapshot. Competitive, MEDDPICC, value prop, risk all live here. | Load the opp record if one exists in the workspace. | Fill Section 1 from the sales rep's input. Mark missing fields as `[待确认]`. |
+| **Opportunity Progression** | EP Section 1 pulls opp snapshot. Competitive, value prop, risk all live here. | Load the opp record if one exists in the workspace. | Fill Section 1 from the sales rep's input. Mark missing fields as `[待确认]`. |
 | **Call Plan** | EP "Next" milestone triggers Call Plan generation. Call Plan pulls context from EP. **Call Plan may sync changes back to EP** if attendees or objectives differ from Next Milestone Detail. | Agent generates Call Plan as a separate document when Next Milestone is confirmed. | N/A — Call Plan is always generated from EP. |
 | **Executive Briefing** | EP context feeds into EB generation. **EB may sync changes back to EP** if attendees or objectives differ from Next Milestone Detail. | Agent generates EB as a separate document when applicable. | N/A. |
 | **Post-Meeting Report** | PMR results roll back into EP Section 3 (Execution Log) and update Section 2 (people stance + roadmap status). | Agent reads the PMR after each visit and updates the EP. | If no PMR is filed, agent prompts sales for a verbal debrief. |
@@ -144,7 +144,7 @@ Before delivering, validate:
 - At least the top 2-3 people have a clear "How to Win" approach
 - Engagement Roadmap with all milestones to close, sequenced per Rule 8
 - Next Milestone Detail card fully populated (customer + AWS attendees, objective, target outcome)
-- Best/worst case estimate populated
+- Estimate & Contingency populated (with Plan B scenarios)
 
 ---
 
@@ -187,4 +187,4 @@ Save EP files in the workspace or a location specified by the user. Each EP is a
 
 ---
 
-*Engagement Plan Skill | Version: 1.1*
+*Engagement Plan Skill | Version: 2.0*
