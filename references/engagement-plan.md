@@ -67,6 +67,24 @@ e.g., "CIO 与微软有超过五年的深厚个人关系，存在绕过技术评
 
 *Last updated: {YYYY-MM-DD} · Source: {Opp Progression / BTTROC / 销售口述 / PMR #N}*
 
+### Engagement Progress
+
+<!-- AGENT GUIDANCE:
+根据 Current Stage 自动生成进度条。用 ● 标记当前阶段，━━ 连接。
+格式固定，agent 每次更新 EP 时自动刷新位置。
+示例（当前 Technical Validation）：
+[Prospect] ━━━ [Qualified] ━━━ [Tech Val] ━━● [Biz Val] ━━━ [Committed] ━━━ [Closed]
+                                              ▲ We are here
+如果有明确的 Target Close Date，在末尾标注：
+[Prospect] ━━━ [Qualified] ━━━ [Tech Val] ━━● [Biz Val] ━━━ [Committed] ━━━ [Closed → 2026-Q1]
+                                              ▲ We are here
+-->
+
+```
+[Prospect] ━━━ [Qualified] ━━━ [Tech Val] ━━━ [Biz Val] ━━━ [Committed] ━━━ [Closed]
+                                ▲ We are here
+```
+
 ---
 
 ## 2. Engagement Plan
