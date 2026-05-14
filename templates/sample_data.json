@@ -5,7 +5,7 @@
     "industry": "Retail",
     "current_stage": "Technical Validation",
     "current_stage_index": 2,
-    "target_close_date": "Q2 2026",
+    "target_launch_date": "Q2 2026",
     "customer_type": "Existing Customer",
     "why_now": "现有ERP系统2027年6月停止维护，CIO已向董事会承诺18个月内完成迁移。按14个月实施周期倒推，必须在2026年Q1完成供应商选型。每延迟一个季度损失约$11M并购整合协同效应。",
     "deal_objective": "与 GlobalRetail 签署 $3.2M TCV 三年期 AWS Enterprise Agreement，覆盖400+工作负载从自建数据中心迁移至 AWS，目标在2026年3月31日前完成签约。",

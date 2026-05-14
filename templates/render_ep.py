@@ -16,7 +16,7 @@ DATA SCHEMA (what the agent produces):
     "industry": "Retail",
     "current_stage": "Technical Validation",
     "current_stage_index": 2,  // 0=Prospect, 1=Qualified, 2=Tech Val, 3=Biz Val, 4=Committed, 5=Closed
-    "target_close_date": "Q2 2026",
+    "target_launch_date": "Q2 2026",
     "customer_type": "Existing Customer",
     "why_now": "...",
     "deal_objective": "...",
