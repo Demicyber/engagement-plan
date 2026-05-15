@@ -160,6 +160,144 @@
             background: var(--md-sys-color-surface-container);
         }
 
+        /* ═══════════════════════════════════════
+           METRO JOURNEY STYLES
+           ═══════════════════════════════════════ */
+        .metro-journey {
+            position: relative;
+            padding-left: 40px;
+            margin-top: 18px;
+        }
+        .metro-journey::before {
+            content: '';
+            position: absolute;
+            left: 19px;
+            top: 0;
+            bottom: 0;
+            width: 5px;
+            border-radius: 2.5px;
+            background: var(--md-sys-color-outline-variant);
+        }
+        .metro-journey .metro-progress {
+            position: absolute;
+            left: 19px;
+            top: 0;
+            width: 5px;
+            border-radius: 2.5px;
+            background: var(--md-sys-color-primary);
+            transition: height 0.3s;
+        }
+        .metro-station {
+            position: relative;
+            padding: 12px 0 20px 20px;
+        }
+        .metro-station:last-child { padding-bottom: 0; }
+        .metro-station-dot {
+            position: absolute;
+            left: -29px;
+            top: 16px;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            font-weight: 700;
+            z-index: 2;
+        }
+        .metro-station-dot.active {
+            background: var(--md-sys-color-primary);
+            color: var(--md-sys-color-on-primary);
+            box-shadow: 0 0 0 4px rgba(103, 80, 164, 0.15);
+        }
+        .metro-station-dot.done {
+            background: var(--md-sys-color-success);
+            color: white;
+        }
+        .metro-station-dot.planned {
+            background: var(--md-sys-color-surface-container-lowest);
+            color: var(--md-sys-color-outline);
+            border: 2.5px solid var(--md-sys-color-outline-variant);
+        }
+        .metro-station-card {
+            background: var(--md-sys-color-surface-container-lowest);
+            border: 1px solid var(--md-sys-color-outline-variant);
+            border-radius: 16px;
+            padding: 14px 16px;
+        }
+        .metro-station.is-active .metro-station-card {
+            border-color: var(--md-sys-color-primary);
+            box-shadow: 0 2px 6px 2px rgba(103, 80, 164, 0.08), 0 1px 2px rgba(0,0,0,0.06);
+        }
+        .metro-station-card .station-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+        .metro-station-card .station-title {
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--md-sys-color-on-surface);
+        }
+        .metro-station-card .station-desc {
+            font-size: 12px;
+            color: var(--md-sys-color-on-surface-variant);
+            line-height: 1.6;
+            margin-bottom: 8px;
+        }
+        .metro-station-card .station-meta {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .metro-station-card .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            font-size: 11px;
+            color: var(--md-sys-color-on-surface-variant);
+            background: var(--md-sys-color-surface-container);
+            padding: 3px 10px;
+            border-radius: 100px;
+        }
+        .metro-station-card .meta-item .material-symbols-outlined {
+            font-size: 13px;
+            color: var(--md-sys-color-primary);
+        }
+        .status-next {
+            background: var(--md-sys-color-primary-container);
+            color: var(--md-sys-color-on-primary-container);
+        }
+        .status-planned {
+            background: var(--md-sys-color-surface-container-highest);
+            color: var(--md-sys-color-on-surface-variant);
+        }
+        .status-done {
+            background: var(--md-sys-color-success-container);
+            color: var(--md-sys-color-success);
+        }
+        .metro-endpoint {
+            margin-top: 18px;
+            margin-left: 20px;
+            padding: 12px 16px;
+            background: var(--md-sys-color-success-container);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .metro-endpoint .material-symbols-outlined {
+            font-size: 18px;
+            color: var(--md-sys-color-success);
+        }
+        .metro-endpoint span {
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--md-sys-color-success);
+        }
+
         @media print {
             body { background: white; }
             .md-card, .md-card-elevated, .md-card-filled { box-shadow: none; border: 1px solid #e0e0e0; }
@@ -311,47 +449,85 @@
             </div>
         </section>
 
-        <!-- Engagement Roadmap -->
+        <!-- Engagement Roadmap (Metro Journey) -->
         <section class="md-card-elevated">
-            <h2 class="section-title flex items-center gap-2">
-                <span class="material-symbols-outlined" style="color: var(--md-sys-color-primary);">map</span>
-                Engagement Roadmap
-            </h2>
-            <div class="mt-4 overflow-x-auto">
-                <table class="w-full text-left">
-                    <thead>
-                        <tr class="border-b" style="border-color: var(--md-sys-color-outline-variant);">
-                            <th class="label-large py-3 px-2">#</th>
-                            <th class="label-large py-3 px-2">Target Window</th>
-                            <th class="label-large py-3 px-2">Milestone</th>
-                            <th class="label-large py-3 px-2">Key Stakeholders</th>
-                            <th class="label-large py-3 px-2">AWS Team</th>
-                            <th class="label-large py-3 px-2">Status</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {% for milestone in roadmap %}
-                        <tr class="border-b" style="border-color: var(--md-sys-color-outline-variant);">
-                            <td class="body-medium py-3 px-2">{{ milestone.number }}</td>
-                            <td class="body-medium py-3 px-2">{{ milestone.target_window }}</td>
-                            <td class="body-medium py-3 px-2">{{ milestone.description }}</td>
-                            <td class="body-medium py-3 px-2">{{ milestone.key_stakeholders }}</td>
-                            <td class="body-medium py-3 px-2">{{ milestone.aws_team }}</td>
-                            <td class="py-3 px-2">
-                                {% if milestone.status == "Done" %}
-                                <span class="pill-badge pill-supporter">✓ Done</span>
-                                {% elif milestone.status == "Next" %}
-                                <span class="pill-badge" style="background: var(--md-sys-color-primary-container); color: var(--md-sys-color-on-primary-container);">Next ↓</span>
-                                {% elif milestone.status == "Skipped" %}
-                                <span class="pill-badge" style="background: var(--md-sys-color-surface-container-highest); color: var(--md-sys-color-on-surface-variant);">Skipped</span>
-                                {% else %}
-                                <span class="pill-badge" style="background: var(--md-sys-color-surface-container-highest); color: var(--md-sys-color-on-surface-variant);">Planned</span>
-                                {% endif %}
-                            </td>
-                        </tr>
-                        {% endfor %}
-                    </tbody>
-                </table>
+            <div class="flex items-center justify-between">
+                <h2 class="section-title flex items-center gap-2 mb-0">
+                    <span class="material-symbols-outlined" style="color: var(--md-sys-color-primary);">map</span>
+                    Engagement Roadmap
+                </h2>
+                {% set done_count = roadmap | selectattr('status', 'equalto', 'Done') | list | length %}
+                <span class="pill-badge" style="background: var(--md-sys-color-primary-container); color: var(--md-sys-color-on-primary-container);">{{ done_count }}/{{ roadmap | length }} Stations Complete</span>
+            </div>
+
+            <div class="metro-journey">
+                <!-- Progress fill (dynamic height based on done stations) -->
+                {% set total = roadmap | length %}
+                {% if total > 0 %}
+                <div class="metro-progress" style="height: {{ (done_count / total * 100) | round }}%;"></div>
+                {% endif %}
+
+                {% for milestone in roadmap %}
+                <div class="metro-station {% if milestone.status == 'Next' %}is-active{% endif %}">
+                    <!-- Station dot -->
+                    {% if milestone.status == "Done" %}
+                    <div class="metro-station-dot done">
+                        <span class="material-symbols-outlined" style="font-size: 14px;">check</span>
+                    </div>
+                    {% elif milestone.status == "Next" %}
+                    <div class="metro-station-dot active">{{ loop.index }}</div>
+                    {% else %}
+                    <div class="metro-station-dot planned">{{ loop.index }}</div>
+                    {% endif %}
+
+                    <!-- Station card -->
+                    <div class="metro-station-card">
+                        <div class="station-header">
+                            <span class="station-title">{{ milestone.description }}</span>
+                            {% if milestone.status == "Done" %}
+                            <span class="pill-badge status-done">✓ Done</span>
+                            {% elif milestone.status == "Next" %}
+                            <span class="pill-badge status-next">Next</span>
+                            {% elif milestone.status == "Skipped" %}
+                            <span class="pill-badge status-planned">Skipped</span>
+                            {% else %}
+                            <span class="pill-badge status-planned">Planned</span>
+                            {% endif %}
+                        </div>
+                        {% if milestone.detail %}
+                        <p class="station-desc">{{ milestone.detail }}</p>
+                        {% endif %}
+                        <div class="station-meta">
+                            {% if milestone.key_stakeholders %}
+                            <span class="meta-item">
+                                <span class="material-symbols-outlined">person</span>
+                                {{ milestone.key_stakeholders }}
+                            </span>
+                            {% endif %}
+                            {% if milestone.aws_team %}
+                            <span class="meta-item">
+                                <span class="material-symbols-outlined">cloud</span>
+                                {{ milestone.aws_team }}
+                            </span>
+                            {% endif %}
+                            {% if milestone.target_date %}
+                            <span class="meta-item">
+                                <span class="material-symbols-outlined">event</span>
+                                {{ milestone.target_date }}
+                            </span>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+
+                <!-- Deal Objective endpoint -->
+                {% if deal_objective %}
+                <div class="metro-endpoint">
+                    <span class="material-symbols-outlined">flag</span>
+                    <span>{{ deal_objective }}</span>
+                </div>
+                {% endif %}
             </div>
         </section>
 
