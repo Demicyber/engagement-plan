@@ -40,7 +40,56 @@ Opp identified → EP created → Call Plan → Visit → PMR → Update EP (+ O
 
 ---
 
-## 3. Core Rules
+## 3. Generation Workflow — Pre-Generation Dialogue
+
+EP generation is **NOT** a one-shot output. When the agent learns about a new opportunity, it enters a conversational preparation phase with sales before generating.
+
+**流程：**
+
+```
+Sales 提到新商机 / Agent 识别到商机信号
+    ↓
+Agent 表明意图："我来帮你做一个 Engagement Plan"
+    ↓
+【Pre-Generation Dialogue 对话确认阶段】
+    ├── Agent 主动问关键信息：客户是谁？商机背景？关键人？
+    ├── Agent 展示已找到的信息（已有 _account/ 数据、网络搜索结果）
+    ├── Sales 可能反问 → Agent 作为信息提供者回应
+    │   （行业背景、这个人什么风格、竞争对手情况、类似案例...）
+    ├── Sales 补充/修正 → Agent 实时调整理解
+    └── 关键输入确认后
+    ↓
+Agent 正式生成 Engagement Plan
+```
+
+**Agent 在对话中的双重角色：**
+
+| 角色 | 说明 | 示例 |
+|------|------|------|
+| **信息收集者** | 收集生成 EP 所需的关键输入 | "这个商机大概什么规模？谁是 decision maker？" |
+| **信息提供者** | 回应销售的问题，提供决策支持信息 | "根据网上信息，这家公司刚完成新一轮融资..." |
+
+**关键原则：**
+
+1. **不要死等所有信息才生成** — 关键人物和商机背景确认后即可生成初版，其余标 `[待确认]`
+2. **随时根据销售的问题调整** — 对话中发现新情况，立即纳入 EP 的考量
+3. **Agent 的回答本身不是 EP** — 对话中的 research 和建议是帮助销售决策的，最终结构化输出才是 EP 文档
+4. **多轮对话是正常的** — 不要急于生成，确保关键共识达成
+
+**必确认项（Agent 不应假设的）：**
+- 客户名 + 商机名/背景
+- 关键人物（至少 1-2 个 key stakeholders）
+- 商机大致阶段 / 来源（new logo vs existing customer）
+
+**可推断项（Agent 可以先填、让 sales 确认的）：**
+- Stakeholder 的 stance / what they care about（基于 CXO Persona + 历史）
+- Win Strategy（基于竞争态势 + 客户背景）
+- Engagement Roadmap 建议（基于 stage + 人物布局）
+- Estimate & Contingency
+
+---
+
+## 4. Core Rules
 
 ### Rule 1: Auto-Create on Any Opportunity
 When the agent learns about a new opportunity (from any request — call plan, meeting prep, deal discussion), automatically generate an EP. Never ask permission.
@@ -147,7 +196,7 @@ EP does NOT determine whether an opportunity should advance to the next sales st
 
 ---
 
-## 4. EP Template
+## 5. EP Template
 
 Read [references/engagement-plan.md](references/engagement-plan.md) before generating. The template has 3 sections:
 
@@ -157,7 +206,7 @@ Read [references/engagement-plan.md](references/engagement-plan.md) before gener
 
 ---
 
-## 5. Relationship with Other Skills
+## 6. Relationship with Other Skills
 
 | Skill | Relationship | How to Access | If Unavailable |
 |--------|-------------|---------------|----------------|
@@ -170,7 +219,7 @@ Read [references/engagement-plan.md](references/engagement-plan.md) before gener
 
 ---
 
-## 6. Document Quality Standards
+## 7. Document Quality Standards
 
 Before delivering, validate:
 - [ ] Opportunity snapshot populated (or marked for Opp Progression input)
@@ -184,7 +233,7 @@ Before delivering, validate:
 
 ---
 
-## 7. Information Insufficient Fallback
+## 8. Information Insufficient Fallback
 
 1. **Never block.** Generate best-effort with available information. Every field can be filled from sales input alone — other skills enrich but are not required.
 2. **Never hallucinate.** Mark as `[待确认]` with actionable context — explain **why** and **how** it would improve the document.
@@ -194,7 +243,7 @@ Before delivering, validate:
 
 ---
 
-## 8. Language & Tone
+## 9. Language & Tone
 
 - **Professional but approachable**
 - **Action-oriented** — active voice, lead with verbs
@@ -204,7 +253,7 @@ Before delivering, validate:
 
 ---
 
-## 9. Document Output
+## 10. Document Output
 
 ### Default: HTML (Material Design 3)
 
@@ -284,4 +333,4 @@ Example: `EP_MinghuaHeavy_AI-Quality-Inspection.html`
 
 ---
 
-*Engagement Plan Skill | Version: 2.1*
+*Engagement Plan Skill | Version: 2.2*
