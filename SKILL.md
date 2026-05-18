@@ -130,12 +130,38 @@ Then combine sales preference with agent analysis to recommend an engagement seq
 - **Sales preference** — always respected as primary input
 - **Decision role weight** — Economic Buyer > Champion > Influencer
 - **Current stance** — strategy choice: consolidate supporters first, or convert skeptics early?
-- **Stage exit criteria** — who's most critical for advancing to the next stage?
+- **Stage exit criteria** (from Opp Progression) — who's most critical for advancing to the next stage?
 - **Dependencies** — e.g., "Need CTO's technical sign-off before CFO will discuss budget"
 
 If the agent's recommended sequence differs from sales preference, **explain the reasoning and let sales decide**. Never override sales judgment silently.
 
 If sales has no preference, agent defaults to its own analysis-driven sequence and marks it as "建议顺序，请确认" / "Recommended sequence — please confirm".
+
+### Rule 11: Stage Review — Opp Progression as Single Source of Truth
+
+EP does NOT determine whether an opportunity should advance to the next sales stage. Only **Opportunity Progression** has the authority to validate stage transitions against AWS Sales Stage Exit Criteria.
+
+**EP 的职责边界：**
+- ✅ 消费 stage 信息（从 Opp Progression 获取当前 stage，显示在 Engagement Progress）
+- ✅ 收集 evidence（通过 PMR 回流的客户反馈、承诺、动作）
+- ✅ 触发 stage review（识别到可能满足推进条件时，调用 Opp Progression）
+- ✅ 根据 stage 变化调整 Roadmap、Stakeholder 策略、Estimate
+- ❌ 自行判断 stage 是否应该推进
+- ❌ 自行对照 exit criteria 做推进决策
+
+**触发时机：** 每次 PMR 回流 EP 后，agent 评估是否需要 stage review：
+1. PMR 中出现 stage-relevant evidence（客户承诺、预算确认、技术方案签字等）
+2. Agent 判断累积 evidence 可能满足当前 stage exit criteria
+3. → 调用 Opportunity Progression skill，提交新 evidence，请求 stage 验证
+
+**Opp Progression 返回结果后，EP 的响应：**
+- **Stage 推进** → 更新 Engagement Progress 进度条 + 调整 Roadmap 后续 milestone 的重心 + 更新 Estimate
+- **Stage 不推进 + gap 清单** → 在 Roadmap / Next Milestone 中针对性补 gap，调整 stakeholder 策略
+
+**重要区分：**
+- Roadmap Milestone 完成标准 = EP 内部自检（"这步做完了吗？"）
+- Opp Stage Exit Criteria = Opp Progression 负责验证（"这个商机能往下走吗？"）
+- 两者层级不同，不可混淆
 
 ---
 
@@ -155,7 +181,7 @@ Read [references/engagement-plan.md](references/engagement-plan.md) before gener
 |--------|-------------|---------------|----------------|
 | **CXO Personas** | Key Stakeholders pulls role-level insights (**What They Care About**) for executive-level stakeholders — priorities, pain points, KPIs, common objections. Provides the **what** layer of people strategy. | Load the persona file matching the stakeholder's title from the `cxo-personas/personas/` repo. Use `INDEX.md` Title Mapping Guide to match job title → persona file. | Use general executive priorities based on role (e.g., CFO cares about cost, CTO cares about architecture). Mark as `[待确认 - no CXO Persona loaded]`. |
 | **Contact Profiling** | Key Stakeholders pulls person-level behavioral profile (**Profiling**) for every stakeholder — communication style, decision patterns, what motivates/triggers them. Provides the **how** layer of people strategy. Updated through dialogue with sales and after each PMR. | Load the contact profiling file if one exists in the workspace; otherwise initiate profiling through dialogue with sales. | Use whatever the sales rep provides verbally. Mark unknown fields as `[待确认]`. |
-| **Opportunity Progression** | EP Section 1 pulls opp snapshot. Competitive, value prop, risk all live here. | Load the opp record if one exists in the workspace. | Fill Section 1 from the sales rep's input. Mark missing fields as `[待确认]`. |
+| **Opportunity Progression** | **Bi-directional.** EP Section 1 pulls opp snapshot (stage, competitive, value prop, risk). After each PMR, EP submits new evidence back to Opp Progression for stage validation — Opp Progression is the **single source of truth** for stage advancement decisions (see Rule 11). EP then adjusts Roadmap based on the result. | Load the opp record if one exists in the workspace. Re-invoke after PMR when stage-relevant evidence is collected. | Fill Section 1 from the sales rep's input. Mark missing fields as `[待确认]`. |
 | **Call Plan** | EP "Next" milestone triggers Call Plan generation. Call Plan pulls context from EP. **Call Plan may sync changes back to EP** if attendees or objectives differ from Next Milestone Detail. | Agent generates Call Plan as a separate document when Next Milestone is confirmed. | N/A — Call Plan is always generated from EP. |
 | **Executive Briefing** | EP context feeds into EB generation. **EB may sync changes back to EP** if attendees or objectives differ from Next Milestone Detail. | Agent generates EB as a separate document when applicable. | N/A. |
 | **Post-Meeting Report** | PMR results roll back into EP Section 3 (Execution Log) and update Section 2 (people stance + roadmap status). | Agent reads the PMR after each visit and updates the EP. | If no PMR is filed, agent prompts sales for a verbal debrief. |
