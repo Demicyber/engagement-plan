@@ -125,7 +125,7 @@ For **executive stakeholders** (C-suite / VP), additionally load the matched **C
 Always plan with best and worst case scenarios. Account for uncertainty, additional stakeholders surfacing, and meetings that don't achieve their objectives.
 
 ### Rule 6: Living Document
-The EP is continuously updated. Every Call Plan, Executive Briefing, and PMR feeds back into it. When a CP or EB is generated with attendees or objectives that differ from EP's Next Milestone Detail, those changes are synced back immediately. The Execution Log (Section 3) grows with each interaction.
+The EP is continuously updated. Every Call Plan, Executive Briefing, and PMR feeds back into it. When a CP or EB is generated with attendees or objectives that differ from EP's Next Milestone Detail, those changes are synced back immediately. The Execution Log (EP document Section 3) grows with each interaction.
 
 ### Rule 7: Always Review with Sales
 After generating or updating, always ask sales to review and revise.
@@ -217,7 +217,7 @@ Read [references/engagement-plan.md](references/engagement-plan.md) before gener
 | **Executive Briefing** | EP context feeds into EB generation. **EB may sync changes back** if attendees or objectives differ. | Agent generates EB when applicable. | N/A. |
 | **BTTROC** | 当销售只有客户名/模糊需求（无 scorecard）时，EP 调用 BTTROC 的产出（identified potential opportunity）作为 Opportunity Snapshot 的数据源。提供客户痛点、CXO 对话角度、和 AWS 方案方向。 | BTTROC 需要上游 `account-analysis` + `solutions-search` 的产出。如果已有，invoke BTTROC skill；如果上游未跑，提示销售先运行上游分析。 | 直接跟销售对话确认 opp 情况（客户痛点、决策者、初步方案方向）。Mark `[待确认]`。 |
 | **Market Intelligence** | 客户外部环境预警（预警卡）。EP 参考其信号调整 Win Strategy、Roadmap 时间节奏、和风险判断。当预警卡发现重大外部变化时，EP 应 re-evaluate 当前策略是否仍然成立。 | Invoke `market-intelligence` skill with customer name. 产出为六层预警卡。 | 依赖销售口述或网络搜索获取外部环境信息。Mark `[网络搜索]` or `[待确认]`。 |
-| **Post-Meeting Report** | PMR results roll back into EP Section 3 (Execution Log) and update Section 2 (people stance + roadmap status). | Agent reads PMR after each visit and updates EP. | If no PMR filed, prompt sales for verbal debrief. |
+| **Post-Meeting Report** | PMR results roll back into EP Execution Log (EP document Section 3) and update EP document Section 2 (people stance + roadmap status). | Agent reads PMR after each visit and updates EP. | If no PMR filed, prompt sales for verbal debrief. |
 
 ---
 
