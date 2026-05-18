@@ -6,6 +6,30 @@
 >
 > ✅ *After generating or updating, agent always asks sales to review and revise.*
 
+<!-- AGENT GUIDANCE — Data Provenance Labeling（信息溯源标注）
+
+所有生成的内容必须标注信息来源，让销售清楚每条信息的置信度。
+
+三个标签：
+- [销售确认] — 销售直接提供或明确确认的信息，可直接使用
+- [AI推断] — Agent 根据上下文分析推断的信息，建议核实（默认，不标时即为此类）
+- [网络搜索] — 通过网络搜索获取的公开信息，注意时效
+
+标注粒度：每条独立可判断真伪的断言。
+显示规则：只显式标出 [销售确认] 和 [网络搜索]，无标注 = AI推断。
+升级机制：销售确认后 [AI推断] → [销售确认]。
+
+示例：
+  张总（CTO）— Sponsor [销售确认]
+   → 关注降本增效，希望年内完成核心系统上云 [AI推断]
+   → 公司2025年Q3完成B轮融资$50M，进入扩张期 [网络搜索]
+
+注意：
+- HTML 渲染时，标签用 pill badge 展示（[销售确认]=绿色，[AI推断]=橙色，[网络搜索]=蓝色）
+- Markdown 输出时直接用方括号文字
+- 销售确认某条信息后，下次更新时升级标签
+-->
+
 ---
 
 ## 1. Opportunity Snapshot
@@ -118,13 +142,13 @@ Stakeholder 数量指引（根据 deal 复杂度灵活判断）：
 
 | Dimension | Details |
 |---|---|
-| **Engagement Priority** | |
-| **Role in This Deal** | |
-| **Current Stance** | |
-| **What They Care About** | |
-| **Profiling** | |
-| **What We Need From Them** | |
-| **How to Win Them** | |
+| **Engagement Priority** | `{e.g., "Must Meet — 没有他的技术签字，采购不会放PO。必须在6月15日前 engage。"}` [销售确认] |
+| **Role in This Deal** | `{e.g., "Technical Evaluator — 负责架构评审，有一票否决权。"}` [销售确认] |
+| **Current Stance** | `{e.g., "Supporter — 在 WAR 后对30%成本优化潜力表现出浓厚兴趣，主动索要了详细报告。"}` |
+| **What They Care About** | `{e.g., "董事会要求Q4前降低云支出20%。上季度财报被点名基础设施成本超支。"}` [网络搜索] |
+| **Profiling** | `{e.g., "工程师出身，数据驱动。偏好30分钟 deep dive，入职8个月需要可见转型成果。"}` |
+| **What We Need From Them** | `{e.g., "1) 5月底前引荐 CFO。2) 分享内部评估标准文档。3) 6月架构评审会上呈现联合 case。"}` |
+| **How to Win Them** | `{e.g., "1) 先搞定 VP Eng — CTO 高度信任其技术判断。2) 提供 TCO 对比。3) 安排 peer-level briefing。"}` |
 
 <!-- AGENT GUIDANCE — 每个维度的写法标准：
 

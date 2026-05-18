@@ -93,6 +93,34 @@ After generating or updating, always ask sales to review and revise.
 ### Rule 8: Never Hallucinate
 Do not fabricate stakeholder information, relationship status, or trust levels. If information is unknown, mark as `[待确认]` and ask sales to provide it.
 
+### Rule 10: Data Provenance Labeling
+
+Every piece of information in the EP output must carry a provenance label so sales knows the confidence level at a glance.
+
+**Three labels:**
+
+| Label | Meaning | Sales Action |
+|-------|---------|--------------|
+| `[销售确认]` | 销售直接提供或明确确认的信息 | 可直接使用 |
+| `[AI推断]` | Agent 根据上下文分析推断的信息 | 建议核实 |
+| `[网络搜索]` | 通过网络搜索获取的公开信息 | 注意时效 |
+
+**标注粒度：** 每条独立可判断真伪的断言（"单条断言"级别）。销售看到一条信息，能独立决定"这个我认不认" = 一个标注单位。
+
+**默认规则：**
+- 没有标注 = `[AI推断]`（生成内容最多的类型）
+- 只有 `[销售确认]` 和 `[网络搜索]` 需要显式标出
+- 这样大部分内容不需要加标签，视觉最干净
+
+**升级机制：** 销售确认某条 `[AI推断]` 信息后 → 升级为 `[销售确认]`
+
+**典型来源对应：**
+- `[销售确认]`：销售口述的人名/关系/stance判断/时间线/内部政治/交易金额
+- `[AI推断]`：Agent 综合上下文分析的 stance 评估/Win Strategy/Plan B/关注点推断
+- `[网络搜索]`：公司融资/财报/新闻/人事变动/LinkedIn 背景/行业趋势
+
+**适用范围：** 所有输出文档（EP / Call Plan / Executive Briefing / PMR）统一使用此标注体系。
+
 ### Rule 9: Stakeholder Engagement Sequence
 When creating an EP, proactively ask sales:
 1. **"Are there must-meet stakeholders?"** — Distinguish `Must Meet` / `Important` / `Nice to Have`
