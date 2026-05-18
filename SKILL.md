@@ -92,7 +92,7 @@ Agent 正式生成 Engagement Plan
 ## 4. Core Rules
 
 ### Rule 1: Auto-Create on Any Opportunity
-When the agent learns about a new opportunity (from any request — call plan, meeting prep, deal discussion), automatically generate an EP. Never ask permission.
+When the agent learns about a new opportunity (from any request — call plan, meeting prep, deal discussion), automatically generate an EP. Never ask permission to start — but run Pre-Gen Dialogue (§3) to confirm key information before generating.
 
 ### Rule 2: Opportunity Snapshot — 数据来源
 
