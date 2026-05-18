@@ -228,9 +228,57 @@ Sales requests these explicitly; agent does not auto-generate.
 
 Example: `EP_MinghuaHeavy_AI-Quality-Inspection.html`
 
-### Storage
+### Storage Architecture
 
-Save EP files in the workspace or a location specified by the user. Each EP is a single file that gets updated in place (living document). The filename is the unique key - use it to find the EP when updating from PMR.
+**首次配置：** Agent 首次与销售互动时，询问本地存储路径：
+> "请告诉我你希望文件存放的本地路径（如 ~/Documents/AWS-Sales/）"
+
+销售确认后，Agent 记住该路径，后续所有文档自动写入/更新到该位置。
+
+**约束：文件存储在销售本地设备，不存放在 Feishu Doc 或其他云文档平台。**
+
+**目录结构（以 Customer → Opportunity 为核心）：**
+
+```
+{sales_local_path}/
+├── {Customer}/
+│   ├── {Opportunity}/
+│   │   ├── EP_{Customer}_{Opportunity}.html
+│   │   ├── CP_{Customer}_{Date}_{MilestoneBrief}.html
+│   │   ├── PMR_{Customer}_{Date}_{MilestoneBrief}.html
+│   │   ├── EB_{Customer}_{Date}_{MilestoneBrief}.html
+│   │   └── ...
+│   ├── {Opportunity-2}/
+│   │   └── ...
+│   └── _account/                  ← 客户级共享资料（跨 Opp）
+│       ├── org-chart.md
+│       ├── account-info.md
+│       └── contacts/
+│           ├── {name}-{title}.md  ← Contact Profile
+│           └── ...
+├── {Customer-2}/
+│   └── ...
+```
+
+**层级逻辑：**
+
+| 层级 | 组织依据 | 理由 |
+|------|---------|------|
+| L1: Customer | 客户名 | 比 Sales Rep 更稳定，换 AM 不需要搬文件 |
+| L2: Opportunity | 商机名 | EP 为核心，所有衍生文档归属同一 Opp |
+| L3: Documents | 类型+日期+描述 | 时间线清晰，CP/PMR 一眼配对 |
+
+**关键规则：**
+- `_account/` 存放跨商机共享资料（Contact Profile、Org Chart）— Agent 新建 EP 时先扫这里复用已有信息
+- CP 和 PMR 使用相同的 `{Date}_{MilestoneBrief}` 后缀，方便配对（会前计划 ↔ 会后报告）
+- MilestoneBrief 取自 EP Roadmap 的 milestone 描述精简版（2-4个英文单词，kebab-case）
+- EP 是 living document，原地更新（不产生新文件）；CP/EB/PMR 每次会议一个新文件
+- 商机关闭后文件夹保留（历史参考），EP 标记状态为 Closed
+
+**多 Opp 定位逻辑（Agent 内部）：**
+- 该客户只有 1 个 active opp → 自动关联
+- 多个 active opp → 问销售确认是哪个商机
+- EP Roadmap 中有 milestone 的 target_date 匹配 → 自动匹配该 opp
 
 ---
 
