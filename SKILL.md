@@ -216,6 +216,37 @@ Read [references/engagement-plan.md](references/engagement-plan.md) before gener
 
 ## 6. Relationship with Other Skills
 
+**调用顺序指引：**
+
+```
+┌─────────────────────────────────────────────────────────┐
+│ Pre-Generation 阶段（EP 生成前收集信息）                    │
+├─────────────────────────────────────────────────────────┤
+│ Step 1: Account Context                                 │
+│         → org chart, stakeholders 基础数据               │
+│                                                         │
+│ Step 2: Opp Progression 或 BTTROC（二选一，见 Rule 2）    │
+│         → opp snapshot (stage, value prop, risk)        │
+│                                                         │
+│ Step 3: CXO Personas + Contact Profiling（可并行）       │
+│         → enrich 每个 stakeholder 的 what + how 层       │
+│                                                         │
+│ Step 4: Competitive Intelligence + Market Intelligence  │
+│         → 丰富 Win Strategy 和 Roadmap 节奏判断          │
+└─────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────┐
+│ Post-Generation 阶段（EP 生成后的 lifecycle）             │
+├─────────────────────────────────────────────────────────┤
+│ EP 触发下游：Call Plan / Executive Briefing              │
+│ 回流更新 EP：Post-Meeting Report                        │
+│ Stage review：Opp Progression（PMR 后触发）              │
+│ 双向 sync：CP/EB 变更 → 回写 EP                         │
+└─────────────────────────────────────────────────────────┘
+```
+
+**注意：** Step 1-4 不是死板流程。Agent 根据对话上下文灵活判断 — 如果销售一上来就给了完整 stakeholder 信息，可以跳过 Step 1 直接 enrich。核心原则：信息够用就生成，不够再补。
+
 | Skill | Relationship | How to Access | If Unavailable |
 |--------|-------------|---------------|----------------|
 | **Account Context** | EP 的 Key Stakeholders 起点数据源。提供客户组织架构（org chart）、关系图谱（relationship map）、客户基本面信息。EP 生成前先从 Account Context 获取该客户主要 stakeholders，再判断哪些人与本 opp 相关。 | Invoke `account-context` skill with customer name. 如已有该客户数据则直接复用；如尚无数据，通过与销售对话 + 网络搜索构建初始版本。 | 直接跟销售确认客户组织架构和关键人物。Mark `[待确认]`。 |
