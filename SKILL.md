@@ -216,23 +216,27 @@ Read [references/engagement-plan.md](references/engagement-plan.md) before gener
 
 ## 6. Relationship with Other Skills
 
-**调用顺序指引：**
+**调用顺序指引（跟随模板 Section 顺序）：**
 
 ```
 ┌─────────────────────────────────────────────────────────┐
 │ Pre-Generation 阶段（EP 生成前收集信息）                    │
 ├─────────────────────────────────────────────────────────┤
-│ Step 1: Account Context                                 │
-│         → org chart, stakeholders 基础数据               │
+│ Step 1: Opp Progression 或 BTTROC（二选一，见 Rule 2）    │
+│         → 填 Section 1: Opportunity Snapshot             │
+│         → 先搞清楚商机是什么                              │
 │                                                         │
-│ Step 2: Opp Progression 或 BTTROC（二选一，见 Rule 2）    │
-│         → opp snapshot (stage, value prop, risk)        │
+│ Step 2: Competitive Intelligence + Market Intelligence  │
+│         → 填 Section 1: Win Strategy + Key Risks         │
+│         → 竞争定位和外部环境判断                           │
 │                                                         │
-│ Step 3: CXO Personas + Contact Profiling（可并行）       │
-│         → enrich 每个 stakeholder 的 what + how 层       │
+│ Step 3: Account Context                                 │
+│         → 填 Section 2: Key Stakeholders 候选人          │
+│         → 知道商机后，从 org chart 筛选相关的人            │
 │                                                         │
-│ Step 4: Competitive Intelligence + Market Intelligence  │
-│         → 丰富 Win Strategy 和 Roadmap 节奏判断          │
+│ Step 4: CXO Personas + Contact Profiling（可并行）       │
+│         → 填 Section 2: enrich 每个人的 what + how 层     │
+│         → 确定了人之后再做 enrich                         │
 └─────────────────────────────────────────────────────────┘
 
 ┌─────────────────────────────────────────────────────────┐
@@ -245,7 +249,7 @@ Read [references/engagement-plan.md](references/engagement-plan.md) before gener
 └─────────────────────────────────────────────────────────┘
 ```
 
-**注意：** Step 1-4 不是死板流程。Agent 根据对话上下文灵活判断 — 如果销售一上来就给了完整 stakeholder 信息，可以跳过 Step 1 直接 enrich。核心原则：信息够用就生成，不够再补。
+**注意：** Step 1-4 不是死板流程。Agent 根据对话上下文灵活判断 — 如果销售一上来就给了完整 stakeholder 信息，可以跳过 Step 3 直接 enrich。核心原则：信息够用就生成，不够再补。
 
 | Skill | Relationship | How to Access | If Unavailable |
 |--------|-------------|---------------|----------------|
