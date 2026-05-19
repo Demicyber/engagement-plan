@@ -210,6 +210,17 @@ EP does NOT determine whether an opportunity should advance to the next sales st
 - Opp Stage Exit Criteria = Opp Progression 负责验证（"这个商机能往下走吗？"）
 - 两者层级不同，不可混淆
 
+### Rule 12: 变更与冲突处理原则
+
+EP 是 living document，商机推进中信息必然会变化。遇到变更或冲突时，遵循以下原则而非穷举场景：
+
+1. **发现即更新** — CP/EB/PMR 执行中发现与 EP 矛盾的事实（如决策人变了、新对手出现、组织架构调整），agent 立即提示销售确认，确认后回写 EP 对应 Section
+2. **标记而非删除** — 失效信息（如离职 stakeholder、被淘汰的竞争对手）标记为失效并注明原因/时间，不直接删除，保留决策上下文供后续复盘
+3. **影响范围评估** — 关键变更发生时，agent 主动检查影响范围：哪些下游内容需要同步调整（如决策链变 → Win Strategy / Roadmap / Next Milestone 可能都要动）
+4. **销售确认兜底** — Agent 可以建议更新方案，但涉及判断性变更（如 "这个人还重不重要"、"要不要调整 Win Strategy"）必须销售确认后才写入
+
+**核心精神：** Agent 主动发现变化、评估影响、提出建议；销售确认后执行写入。不遗漏、不擅自判断、不丢失历史。
+
 ---
 
 ## 5. EP Template
