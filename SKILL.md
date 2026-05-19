@@ -401,4 +401,4 @@ Example: `EP_MinghuaHeavy_AI-Quality-Inspection.html`
 
 ---
 
-*Engagement Plan Skill | Version: 2.2*
+*Engagement Plan Skill | Version: 2.3*
