@@ -9,6 +9,12 @@ description: >
   Triggers on: "engagement plan", "opportunity review", "deal strategy", "win plan",
   "how do I approach this deal", "help me plan this opportunity",
   "商机管理", "商机推进", "拜访规划".
+  Also triggers when sales asks about stakeholder mapping, deal approach,
+  meeting cadence planning, key person analysis, or how to advance an opportunity.
+  触发场景还包括："关键人分析"、"见谁"、"怎么推这个商机"、"这个客户怎么打"、
+  "deal节奏"、"谁是decision maker"、"人的策略"。
+  Use this skill whenever the conversation involves planning WHO to engage and HOW
+  to win them in a specific deal — even if the user doesn't explicitly say "engagement plan".
 ---
 
 # Engagement Plan Skill
@@ -197,6 +203,8 @@ EP does NOT determine whether an opportunity should advance to the next sales st
 ---
 
 ## 5. EP Template
+
+⚠️ **职责分工：** SKILL.md 定义策略和决策逻辑（什么时候做什么、skill 之间怎么协作、fallback 策略）。Reference file 定义每个字段的执行标准（怎么写、写法公式、质量验证、示例）。Agent 生成任何 EP 内容前必须先读 reference file。
 
 Read [references/engagement-plan.md](references/engagement-plan.md) before generating. The template has 3 sections:
 
