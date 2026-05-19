@@ -5,7 +5,7 @@ description: >
   Focuses on people strategy and meeting execution: who to engage, what to discuss,
   how many meetings to plan, and tracking execution against the plan.
   Triggered when the agent learns about a new opportunity from a sales rep.
-  Works with Opportunity Progression, Contact Profiling, Call Plan, Post-Meeting Report, and CXO Personas skills.
+  Works with Account Context, Opportunity Progression, Contact Profiling, Call Plan, Post-Meeting Report, CXO Personas, Competitive Intelligence, Market Intelligence, and BTTROC skills.
   Triggers on: "engagement plan", "opportunity review", "deal strategy", "win plan",
   "how do I approach this deal", "help me plan this opportunity",
   "商机管理", "商机推进", "拜访规划".
@@ -210,8 +210,10 @@ Read [references/engagement-plan.md](references/engagement-plan.md) before gener
 
 | Skill | Relationship | How to Access | If Unavailable |
 |--------|-------------|---------------|----------------|
+| **Account Context** | EP 的 Key Stakeholders 起点数据源。提供客户组织架构（org chart）、关系图谱（relationship map）、客户基本面信息。EP 生成前先从 Account Context 获取该客户主要 stakeholders，再判断哪些人与本 opp 相关。 | 加载 `_account/` 目录下已有的 account-info.md、org-chart.md、contacts/。如尚无数据，通过与销售对话 + 网络搜索构建初始版本。 | 直接跟销售确认客户组织架构和关键人物。Mark `[待确认]`。 |
 | **CXO Personas** | Role-level insights (**What They Care About**) for executive stakeholders. Context-aware — select dimensions relevant to this opp + stage. | Load from `cxo-personas/personas/` using INDEX.md Title Mapping. | General executive priorities based on role. Mark `[待确认]`. |
 | **Contact Profiling** | Person-level behavioral profile (**Profiling**) for every stakeholder. Updated through dialogue with sales and after each PMR. | Load if exists; otherwise build through dialogue with sales. | Use sales rep's input. Mark `[待确认]`. |
+| **Competitive Intelligence** | 竞争情报数据源。为 Win Strategy 提供 battlecards、竞品对比分析、竞争定位建议。EP 在制定 Win Strategy 和 Roadmap 中的竞争应对节奏时参考其产出。当竞争态势发生变化时（如竞争对手换人、降价、新产品发布），EP 应 re-evaluate Win Strategy。 | Invoke `competitive-intelligence` skill with competitor name(s). 产出为 battlecard（竞品对比、差异化定位、应对话术）。 | 依赖销售口述竞争情况 + 网络搜索获取公开信息。Mark `[销售确认]` or `[网络搜索]`。 |
 | **Opportunity Progression** | **Bi-directional.** EP pulls opp snapshot (stage, competitive, value prop, risk). After each PMR, EP submits new evidence back for stage validation — Opp Progression is the **single source of truth** for stage advancement (see Rule 11). EP adjusts Roadmap based on result. | Load opp record if exists. Re-invoke after PMR when stage-relevant evidence is collected. | Fill from sales rep's input. Mark `[待确认]`. |
 | **Call Plan** | EP "Next" milestone triggers Call Plan generation. CP pulls context from EP. **CP may sync changes back** if attendees or objectives differ from Next Milestone Detail. | Agent generates CP when Next Milestone is confirmed. | N/A — CP is always generated from EP. |
 | **Executive Briefing** | EP context feeds into EB generation. **EB may sync changes back** if attendees or objectives differ. | Agent generates EB when applicable. | N/A. |

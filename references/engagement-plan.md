@@ -123,7 +123,7 @@ e.g., "CIO 与微软有超过五年的深厚个人关系，存在绕过技术评
 
 <!-- AGENT GUIDANCE:
 数据来源流程：
-1. 从 Account Information (org chart, relationship map) 获取客户主要 stakeholders
+1. 从 Account Context (org chart, relationship map) 获取客户主要 stakeholders
 2. Agent 根据 opp 上下文判断哪些人跟这个商机相关
 3. 跟销售确认：是否需要加人或去人
 4. 对每个人 enrich：
