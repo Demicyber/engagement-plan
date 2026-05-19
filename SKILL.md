@@ -107,10 +107,17 @@ When the agent learns about a new opportunity (from any request — call plan, m
 - BTTROC 和 Opportunity Progression 可以叠加调用，不互斥
 - Agent 根据对话上下文灵活判断，不需要死板流程
 
-**信号参考：**
-- 销售提供了 scorecard / opp record / 完整的 deal 信息 → 优先调用 Opportunity Progression
-- 销售只给了客户名、模糊需求、或有 opp 但未填 scorecard → 调用 BTTROC 了解客户 potential opp，结合销售口述
-- 不确定时，一个问题确认："这个商机有没有现成的 scorecard 或 opp record？"
+**判断逻辑：**
+```
+├── 销售提供了 scorecard / opp record / 完整 deal 信息？
+│   └── YES → 调用 Opportunity Progression
+├── 销售只给了客户名 + 模糊需求（无 scorecard）？
+│   └── YES → 调用 BTTROC（需确认上游 account-analysis + solutions-search 已跑）
+└── 不确定？
+    └── 问一句："这个商机有没有现成的 scorecard 或 opp record？"
+```
+
+**Scorecard 自动填写：** Opportunity Progression 不再要求销售必须手动填写 scorecard 才能调用。Agent 可以根据 Call Plan、PMR、对话中获取的信息自动填写/更新 scorecard，然后交由 Opp Progression 判断是否满足 stage exit criteria。销售只需确认 agent 填写的内容是否准确。
 
 **共通要求：**
 - 未确认字段标 `[待确认]`
@@ -189,7 +196,10 @@ EP does NOT determine whether an opportunity should advance to the next sales st
 **触发时机：** 每次 PMR 回流 EP 后，agent 评估是否需要 stage review：
 1. PMR 中出现 stage-relevant evidence（客户承诺、预算确认、技术方案签字等）
 2. Agent 判断累积 evidence 可能满足当前 stage exit criteria
-3. → 调用 Opportunity Progression skill，提交新 evidence，请求 stage 验证
+3. Agent 根据 Call Plan + PMR + 对话中的信息自动更新 scorecard（销售确认后）
+4. → 调用 Opportunity Progression skill，提交更新后的 scorecard + 新 evidence，请求 stage 验证
+
+**核心原则：** 只要 opp 要推进到下一个 stage，都必须通过 Opp Progression 来判定。Agent 可以帮销售填 scorecard、收集 evidence，但推进决策权始终在 Opp Progression。
 
 **Opp Progression 返回结果后，EP 的响应：**
 - **Stage 推进** → 更新 Engagement Progress 进度条 + 调整 Roadmap 后续 milestone 的重心 + 更新 Estimate
